@@ -6,22 +6,52 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:DataType="using:Metro_UWP.Models"  
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Pivot Margin="10" 
+               Name="MyPivot"
                Background="White">
             <PivotItem>
                 <PivotItem.Header>
                     Sousse - Mahdia
                 </PivotItem.Header>
                 <PivotItem.Content>
-                    <Grid>
-                        
+                    <Grid Height="300" Padding="20">
+                        <GridView Name="MyListView_sm"
+                                  ItemClick="MyListView_ItemClick"
+                                  IsItemClickEnabled="True">
+                            <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <ItemsWrapGrid Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+                            <GridView.ItemTemplate>
+                                <DataTemplate x:DataType="DataType:Station">
+                                    <StackPanel Padding="20"
+                                                Margin="10"
+                                                Width="200"
+                                                HorizontalAlignment="Stretch"
+                                                Background="WhiteSmoke"
+                                                BorderThickness="1"
+                                                BorderBrush="#eee">
+                                        <TextBlock Text="{Binding NameFR}"
+                                                   HorizontalAlignment="Center" />
+                                        <TextBlock Text="{Binding NameAR}"
+                                                   FontSize="11"
+                                                   Foreground="Gray"
+                                                   HorizontalAlignment="Center" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
                     </Grid>
                 </PivotItem.Content>
             </PivotItem>
@@ -30,11 +60,63 @@
                     Mahdia - Sousse
                 </PivotItem.Header>
                 <PivotItem.Content>
-                    <Grid>
-                        
+                    <Grid Height="300" Padding="20">
+                        <GridView Name="MyListView_ms" 
+                                  ItemClick="MyListView_ItemClick"
+                                  IsItemClickEnabled="True">
+                            <GridView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <ItemsWrapGrid Orientation="Horizontal"/>
+                                </ItemsPanelTemplate>
+                            </GridView.ItemsPanel>
+                            <GridView.ItemTemplate>
+                                <DataTemplate x:DataType="DataType:Station">
+                                    <StackPanel Padding="20"
+                                                Margin="10"
+                                                Width="200"
+                                                HorizontalAlignment="Stretch"
+                                                Background="WhiteSmoke"
+                                                BorderThickness="1"
+                                                BorderBrush="#eee">
+                                        <TextBlock Text="{Binding NameFR}"
+                                                   HorizontalAlignment="Center" />
+                                        <TextBlock Text="{Binding NameAR}"
+                                                   FontSize="11"
+                                                   Foreground="Gray"
+                                                   HorizontalAlignment="Center" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
                     </Grid>
                 </PivotItem.Content>
             </PivotItem>
         </Pivot>
+        
+        <StackPanel Padding="20" 
+              Margin="10"
+              Grid.Row="1"
+              Background="White">
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Name="StationName"/>
+
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Name="RemainingTimeTB"/>
+        </StackPanel>
+
+        <Grid Padding="10" 
+              Margin="10"
+              Grid.Row="2"
+              Background="White">
+            <GridView Name="TimesGridView">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" />
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </Grid>
     </Grid>
 </Page>

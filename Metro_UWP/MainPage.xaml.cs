@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Metro_UWP.Repos;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -43,6 +44,15 @@ namespace Metro_UWP
                     break;
                 default:break;
             }
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                await StorageRepos.GetData();
+            }
+            catch (Exception ex) { }
         }
     }
 }

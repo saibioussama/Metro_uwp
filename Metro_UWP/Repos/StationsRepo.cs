@@ -11,19 +11,25 @@ namespace Metro_UWP.Repos
 {
     public class StationsRepo
     {
-        public static List<Station> GetStations(Station.Directions direction)
+        static StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+
+        public async static Task<List<Station>> GetStations(Station.Directions direction)
         {
-            if (ApplicationData.Current.RoamingSettings.Values[direction == 0 ? StorageRepos.stations_sm : StorageRepos.stations_ms] != null)
+            try
             {
-                string stations_json = ApplicationData.Current.RoamingSettings.Values[direction == 0 ? StorageRepos.stations_sm : StorageRepos.stations_ms].ToString();
-                return JsonConvert.DeserializeObject<List<Station>>(stations_json);
+                StorageFile sampleFile = await localFolder.GetFileAsync(direction == Station.Directions.SM ? StorageRepos.stations_sm : StorageRepos.stations_ms);
+                string stations_json = await FileIO.ReadTextAsync(sampleFile);
+                return Task.FromResult(JsonConvert.DeserializeObject<List<Station>>(stations_json)).Result;
             }
-            return null;
+            catch
+            {
+                return null;
+            }
         }
 
-        public static Station GetStation(Station.Directions direction,int StationId)
+        public static Station GetStation(Station.Directions direction, int StationId)
         {
-            return GetStations(direction).SingleOrDefault(s => s.Id == StationId);
+            return  GetStations(direction).Result.SingleOrDefault(s => s.Id == StationId);
         }
     }
 }

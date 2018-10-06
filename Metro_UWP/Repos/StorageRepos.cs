@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 
 namespace Metro_UWP.Repos
 {
@@ -15,10 +16,8 @@ namespace Metro_UWP.Repos
         public static string stations_ms = nameof(stations_ms);
         public static string stations_sm = nameof(stations_sm);
 
-        public static bool IsDataExist() => !(Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.times_ms)] == null ||
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.times_sm)] == null ||
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.stations_ms)] == null ||
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.stations_sm)] == null);
+
+        public static bool IsDataExist() => false;
 
         public static async Task GetData()
         {
@@ -29,10 +28,25 @@ namespace Metro_UWP.Repos
                 var times_sm = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/times_sm.json");
                 var stations_ms = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/stations_ms.json");
                 var stations_sm = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/stations_sm.json");
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.times_ms)] = times_ms;
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.times_sm)] = times_sm;
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.stations_ms)] = stations_ms;
-                Windows.Storage.ApplicationData.Current.RoamingSettings.Values[nameof(StorageRepos.stations_sm)] = stations_sm;
+
+                Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+
+
+                StorageFile sampleFile_times_ms = await localFolder.CreateFileAsync(StorageRepos.times_ms,
+                    CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(sampleFile_times_ms, times_ms);
+
+                StorageFile sampleFile_times_sm = await localFolder.CreateFileAsync(StorageRepos.times_sm,
+                    CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(sampleFile_times_sm, times_sm);
+
+                StorageFile sampleFile_stations_ms = await localFolder.CreateFileAsync(StorageRepos.stations_ms,
+                    CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(sampleFile_stations_ms, stations_ms);
+
+                StorageFile sampleFile_stations_sm = await localFolder.CreateFileAsync(StorageRepos.stations_sm,
+                    CreationCollisionOption.ReplaceExisting);
+                await FileIO.WriteTextAsync(sampleFile_stations_sm, stations_sm);
             }
             catch (Exception ex)
             {

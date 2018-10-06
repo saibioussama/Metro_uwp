@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -32,12 +33,6 @@ namespace Metro_UWP
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
-            Task.Run(async () =>
-            {
-                if (!StorageRepos.IsDataExist())
-                    await StorageRepos.GetData();
-            });
         }
 
         /// <summary>
@@ -79,6 +74,7 @@ namespace Metro_UWP
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+            //CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
         }
 
         /// <summary>

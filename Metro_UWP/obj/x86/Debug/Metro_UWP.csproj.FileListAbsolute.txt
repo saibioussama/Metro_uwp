@@ -1,4 +1,3 @@
-C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\obj\x86\Debug\Metro_UWP.csprojAssemblyReference.cache
 C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\obj\x86\Debug\App.g.i.cs
 C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\obj\x86\Debug\App.g.cs
 C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\obj\x86\Debug\MainPage.g.i.cs
