@@ -10,6 +10,9 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Foundation.Metadata;
+using Windows.UI;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -40,7 +43,7 @@ namespace Metro_UWP
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -74,7 +77,19 @@ namespace Metro_UWP
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
-            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = false;
+            var coreTitleBar = CoreApplication.GetCurrentView().TitleBar;
+            coreTitleBar.ExtendViewIntoTitleBar = false;
+            if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
+            {
+                var statusBar = StatusBar.GetForCurrentView();
+                if (statusBar != null)
+                {
+                    await statusBar.ShowAsync();
+                    statusBar.ForegroundColor = Colors.Black;
+                    statusBar.BackgroundColor = Colors.WhiteSmoke;
+                }
+            }
+
         }
 
         /// <summary>

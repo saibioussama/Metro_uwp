@@ -26,24 +26,57 @@ namespace Metro_UWP
         public MainPage()
         {
             this.InitializeComponent();
-            MyFrame.Navigate(typeof(HomePage));
+            myFrame1.Navigate(typeof(HomePage));
+            //MyFrame.Navigate(typeof(HomePage));
         }
 
-        private void MyNavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        //private void MyNavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        //{
+        //    var item = args.SelectedItem as NavigationViewItem;
+        //    switch (item.Content)
+        //    {
+        //        case "Home":
+        //            MyFrame.Navigate(typeof(HomePage));
+        //            MyNavView.Header = "Home";
+        //            break;
+        //        case "Settings":
+        //            MyFrame.Navigate(typeof(HomePage));
+        //            MyNavView.Header = "Settings";
+        //            break;
+        //        default:break;
+        //    }
+        //}
+
+        //private async void Page_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        await StorageRepos.GetData();
+        //    }
+        //    catch (Exception ex) { }
+        //}
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
-            var item = args.SelectedItem as NavigationViewItem;
-            switch (item.Content)
-            {
-                case "Home":
-                    MyFrame.Navigate(typeof(HomePage));
-                    MyNavView.Header = "Home";
-                    break;
-                case "Settings":
-                    MyFrame.Navigate(typeof(HomePage));
-                    MyNavView.Header = "Settings";
-                    break;
-                default:break;
-            }
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+
+        }
+
+        private void listitem1_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            HumburgerTB.Text = "Acceuil";
+            myFrame1.Navigate(typeof(HomePage));
+            MySplitView.IsPaneOpen = false;
+        }
+
+        private void listitem5_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+            myFrame1.Navigate(typeof(SettingsPage));
+            HumburgerTB.Text = "Settings";
+
+            MySplitView.IsPaneOpen = false;
+            MyListBox.SelectedItem = false;
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -55,4 +88,5 @@ namespace Metro_UWP
             catch (Exception ex) { }
         }
     }
+
 }

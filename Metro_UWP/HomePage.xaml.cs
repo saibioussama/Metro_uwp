@@ -28,6 +28,8 @@ namespace Metro_UWP
         Station SelectedStation;
         List<DateTime?> AvailableTimesOfStation;
         DispatcherTimer timer;
+        List<Station> stations_ms, stations_sm;
+
         public HomePage()
         {
             this.InitializeComponent();
@@ -38,22 +40,28 @@ namespace Metro_UWP
 
         private void Timer_Tick(object sender, object e)
         {
-            if (AvailableTimesOfStation.First() != null)
-                RemainingTimeTB.Text = (AvailableTimesOfStation.First() - DateTime.Now).ToString();
+            if (AvailableTimesOfStation != null && AvailableTimesOfStation.Count > 0)
+                RemainingTimeTB.Text = (AvailableTimesOfStation.First() - DateTime.Now).ToString().Substring(0, 8);
             else
                 RemainingTimeTB.Text = "--:--:--";
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var stations_sm = await StationsRepo.GetStations(Models.Station.Directions.SM);
-            MyListView_sm.ItemsSource = stations_sm;
-            var stations_ms = await StationsRepo.GetStations(Models.Station.Directions.MS);
-            MyListView_ms.ItemsSource = stations_ms;
-            SelectedStation = stations_sm.First();
-            AvailableTimesOfStation = await GetAvailableTimesOfStation(MyPivot.SelectedIndex == 0 ? Station.Directions.SM : Station.Directions.MS, SelectedStation.Id);
-            StationName.Text = SelectedStation.NameAR;
-            TimesGridView.ItemsSource = AvailableTimesOfStation;
+            try
+            {
+                stations_sm = await StationsRepo.GetStations(Models.Station.Directions.SM);
+                MyListView_sm.ItemsSource = stations_sm;
+                stations_ms = await StationsRepo.GetStations(Models.Station.Directions.MS);
+                MyListView_ms.ItemsSource = stations_ms;
+                SelectedStation = stations_sm?.First();
+                AvailableTimesOfStation = await GetAvailableTimesOfStation(MyPivot.SelectedIndex == 0 ? Station.Directions.SM : Station.Directions.MS, SelectedStation.Id);
+                UpdateInformation();
+            }
+            catch (Exception ex)
+            {
+
+            }
             timer.Start();
         }
 
@@ -61,13 +69,42 @@ namespace Metro_UWP
         {
             SelectedStation = e.ClickedItem as Station;
             AvailableTimesOfStation = await GetAvailableTimesOfStation(MyPivot.SelectedIndex == 0 ? Station.Directions.SM : Station.Directions.MS, SelectedStation.Id);
-            StationName.Text = SelectedStation.NameAR;
+            UpdateInformation();
         }
 
-        public async Task<List<DateTime?>> GetAvailableTimesOfStation(Station.Directions direction,int stationId)
+        private async Task<List<DateTime?>> GetAvailableTimesOfStation(Station.Directions direction, int stationId)
         {
             var times = await LinesRepos.GetAvailableTimesOfStation(direction, stationId);
             return Task.FromResult(times).Result;
+        }
+
+        private void UpdateInformation()
+        {
+            StationName.Text = SelectedStation.NameAR;
+            TimesGridView.ItemsSource = AvailableTimesOfStation;
+
+        }
+
+        private async void MyPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (stations_sm?.Count > 0 && stations_ms?.Count > 0)
+            {
+                var item = MyPivot.Items[MyPivot.SelectedIndex];
+
+                switch (MyPivot.SelectedIndex)
+                {
+                    case 0:
+                        SelectedStation = stations_sm.First();
+                        AvailableTimesOfStation = await GetAvailableTimesOfStation(Station.Directions.SM, SelectedStation.Id);
+                        break;
+                    case 1:
+                        SelectedStation = stations_ms.First();
+                        AvailableTimesOfStation = await GetAvailableTimesOfStation(Station.Directions.MS, SelectedStation.Id);
+                        break;
+                    default: break;
+                }
+                UpdateInformation();
+            }
         }
     }
 }

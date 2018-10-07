@@ -10,14 +10,82 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <NavigationView x:Name="MyNavView" Header="Home" SelectionChanged="MyNavView_SelectionChanged">
+        <!--<NavigationView x:Name="MyNavView" Header="Home" SelectionChanged="MyNavView_SelectionChanged">
             <NavigationView.MenuItems>
                 <NavigationViewItem IsSelected="True" Content="Home" Icon="Home"/>
             </NavigationView.MenuItems>
             
             <Frame Name="MyFrame" 
                    Background="WhiteSmoke"/>
-        </NavigationView>
+        </NavigationView>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button Height="40" Width="40" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="" 
+                    FontWeight="Bold"
+                    Name="HamburgerButton" 
+                    Click="HamburgerButton_Click"/>
+            <TextBlock Name="HumburgerTB" 
+                       Text="Home" 
+                       VerticalAlignment="Center" 
+                       RelativePanel.RightOf="HamburgerButton"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       Margin="15,0,0,0"/>
+            <TextBlock Name="DateNowTextBlock" 
+                       FontSize="18"
+                       RelativePanel.AlignRightWithPanel="True" 
+                       FontWeight="Thin" 
+                       Margin="5"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        </RelativePanel>
+        <SplitView Grid.Row="1"
+                   Name="MySplitView" 
+                   CompactPaneLength="40"
+                   DisplayMode="Overlay">
+            <SplitView.Pane>
+                <Grid>
+                    <ListBox Name="MyListBox" 
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             ScrollViewer.VerticalScrollMode="Auto">
+                        <ListBoxItem Tapped="listitem1_Tapped"
+                                     Name="listitem1">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text=""
+                                           FontFamily="Segoe MDL2 Assets"  />
+                                <TextBlock Text="Home"
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                    <ListView Margin="-10,0,0,0"
+                              BorderBrush="LightGray"
+                              BorderThickness="0,1,0,0" 
+                              VerticalAlignment="Bottom"
+                              HorizontalAlignment="Stretch"
+                              SelectionMode="None" >
+                        <ListBoxItem  Tapped="listitem5_Tapped" >
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="" 
+                                           FontFamily="Segoe MDL2 Assets" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Text="Settings"  
+                                           Margin="30,0,0,0"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListView>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                    <Frame Name="myFrame1" 
+                           Background="WhiteSmoke"/>
+            </SplitView.Content>
+        </SplitView>
 
     </Grid>
 </Page>

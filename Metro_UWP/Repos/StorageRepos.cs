@@ -31,7 +31,6 @@ namespace Metro_UWP.Repos
 
                 Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
 
-
                 StorageFile sampleFile_times_ms = await localFolder.CreateFileAsync(StorageRepos.times_ms,
                     CreationCollisionOption.ReplaceExisting);
                 await FileIO.WriteTextAsync(sampleFile_times_ms, times_ms);

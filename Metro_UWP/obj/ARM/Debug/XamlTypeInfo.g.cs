@@ -8,29 +8,23 @@
 //------------------------------------------------------------------------------
 
 
+
 namespace Metro_UWP
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlMetaDataProvider __appProvider;
-        private global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlMetaDataProvider _AppProvider
-        {
-            get
-            {
-                if (__appProvider == null)
-                {
-                    __appProvider = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlMetaDataProvider();
-                }
-                return __appProvider;
-            }
-        }
+    private global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         /// <summary>
         /// GetXamlType(Type)
         /// </summary>
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
-            return _AppProvider.GetXamlType(type);
+            if(_provider == null)
+            {
+                _provider = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlTypeInfoProvider();
+            }
+            return _provider.GetXamlTypeByType(type);
         }
 
         /// <summary>
@@ -38,56 +32,11 @@ namespace Metro_UWP
         /// </summary>
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(string fullName)
         {
-            return _AppProvider.GetXamlType(fullName);
-        }
-
-        /// <summary>
-        /// GetXmlnsDefinitions()
-        /// </summary>
-        public global::Windows.UI.Xaml.Markup.XmlnsDefinition[] GetXmlnsDefinitions()
-        {
-            return _AppProvider.GetXmlnsDefinitions();
-        }
-    }
-}
-
-namespace Metro_UWP.Metro_UWP_XamlTypeInfo
-{
-    /// <summary>
-    /// Main class for providing metadata for the app or library
-    /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed class XamlMetaDataProvider : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
-    {
-        private global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlTypeInfoProvider _provider = null;
-
-        private global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlTypeInfoProvider Provider
-        {
-            get
+            if(_provider == null)
             {
-                if (_provider == null)
-                {
-                    _provider = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlTypeInfoProvider();
-                }
-                return _provider;
+                _provider = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlTypeInfoProvider();
             }
-        }
-
-        /// <summary>
-        /// GetXamlType(Type)
-        /// </summary>
-        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
-        {
-            return Provider.GetXamlTypeByType(type);
-        }
-
-        /// <summary>
-        /// GetXamlType(String)
-        /// </summary>
-        public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(string fullName)
-        {
-            return Provider.GetXamlTypeByName(fullName);
+            return _provider.GetXamlTypeByName(fullName);
         }
 
         /// <summary>
@@ -98,30 +47,30 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
             return new global::Windows.UI.Xaml.Markup.XmlnsDefinition[0];
         }
     }
+}
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+namespace Metro_UWP.Metro_UWP_XamlTypeInfo
+{
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlTypeInfoProvider
     {
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlTypeByType(global::System.Type type)
         {
             global::Windows.UI.Xaml.Markup.IXamlType xamlType;
-            lock (_xamlTypeCacheByType) 
-            { 
-                if (_xamlTypeCacheByType.TryGetValue(type, out xamlType))
-                {
-                    return xamlType;
-                }
-                int typeIndex = LookupTypeIndexByType(type);
-                if(typeIndex != -1)
-                {
-                    xamlType = CreateXamlType(typeIndex);
-                }
-                if (xamlType != null)
-                {
-                    _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
-                    _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
-                }
+            if (_xamlTypeCacheByType.TryGetValue(type, out xamlType))
+            {
+                return xamlType;
+            }
+            int typeIndex = LookupTypeIndexByType(type);
+            if(typeIndex != -1)
+            {
+                xamlType = CreateXamlType(typeIndex);
+            }
+            if (xamlType != null)
+            {
+                _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
+                _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
             }
             return xamlType;
         }
@@ -133,22 +82,19 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
                 return null;
             }
             global::Windows.UI.Xaml.Markup.IXamlType xamlType;
-            lock (_xamlTypeCacheByType)
+            if (_xamlTypeCacheByName.TryGetValue(typeName, out xamlType))
             {
-                if (_xamlTypeCacheByName.TryGetValue(typeName, out xamlType))
-                {
-                    return xamlType;
-                }
-                int typeIndex = LookupTypeIndexByName(typeName);
-                if(typeIndex != -1)
-                {
-                    xamlType = CreateXamlType(typeIndex);
-                }
-                if (xamlType != null)
-                {
-                    _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
-                    _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
-                }
+                return xamlType;
+            }
+            int typeIndex = LookupTypeIndexByName(typeName);
+            if(typeIndex != -1)
+            {
+                xamlType = CreateXamlType(typeIndex);
+            }
+            if (xamlType != null)
+            {
+                _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
+                _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
             }
             return xamlType;
         }
@@ -160,17 +106,14 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
                 return null;
             }
             global::Windows.UI.Xaml.Markup.IXamlMember xamlMember;
-            lock (_xamlMembers)
+            if (_xamlMembers.TryGetValue(longMemberName, out xamlMember))
             {
-                if (_xamlMembers.TryGetValue(longMemberName, out xamlMember))
-                {
-                    return xamlMember;
-                }
-                xamlMember = CreateXamlMember(longMemberName);
-                if (xamlMember != null)
-                {
-                    _xamlMembers.Add(longMemberName, xamlMember);
-                }
+                return xamlMember;
+            }
+            xamlMember = CreateXamlMember(longMemberName);
+            if (xamlMember != null)
+            {
+                _xamlMembers.Add(longMemberName, xamlMember);
             }
             return xamlMember;
         }
@@ -189,17 +132,19 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[5];
             _typeNameTable[0] = "Metro_UWP.HomePage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "Metro_UWP.MainPage";
+            _typeNameTable[4] = "Metro_UWP.SettingsPage";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[5];
             _typeTable[0] = typeof(global::Metro_UWP.HomePage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::Metro_UWP.MainPage);
+            _typeTable[4] = typeof(global::Metro_UWP.SettingsPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -236,6 +181,7 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
 
         private object Activate_0_HomePage() { return new global::Metro_UWP.HomePage(); }
         private object Activate_3_MainPage() { return new global::Metro_UWP.MainPage(); }
+        private object Activate_4_SettingsPage() { return new global::Metro_UWP.SettingsPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -268,6 +214,13 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
+
+            case 4:   //  Metro_UWP.SettingsPage
+                userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_SettingsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
@@ -282,7 +235,7 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlSystemBaseType : global::Windows.UI.Xaml.Markup.IXamlType
     {
@@ -328,9 +281,8 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
     internal delegate object Activator();
     internal delegate void AddToCollection(object instance, object item);
     internal delegate void AddToDictionary(object instance, object key, object item);
-    internal delegate object CreateFromStringMethod(string args);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlUserType : global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlSystemBaseType
     {
@@ -413,16 +365,12 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
 
         override public void RunInitializer() 
         {
-            global::System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
+            System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor(UnderlyingType.TypeHandle);
         }
 
         override public object CreateFromString(string input)
         {
-            if (CreateFromStringMethod != null)
-            {
-                return this.CreateFromStringMethod(input);
-            }
-            else if (_enumValues != null)
+            if (_enumValues != null)
             {
                 int value = 0;
 
@@ -477,7 +425,6 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
         public Activator Activator { get; set; }
         public AddToCollection CollectionAdd { get; set; }
         public AddToDictionary DictionaryAdd { get; set; }
-        public CreateFromStringMethod CreateFromStringMethod {get; set; }
 
         public void SetContentPropertyName(string contentPropertyName)
         {
@@ -541,7 +488,7 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
     internal delegate object Getter(object instance);
     internal delegate void Setter(object instance, object value);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {

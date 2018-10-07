@@ -10,14 +10,82 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <NavigationView x:ConnectionId='2' x:Name="MyNavView" Header="Home"                                              >
+        <!--<NavigationView x:Name="MyNavView" Header="Home" SelectionChanged="MyNavView_SelectionChanged">
             <NavigationView.MenuItems>
                 <NavigationViewItem IsSelected="True" Content="Home" Icon="Home"/>
             </NavigationView.MenuItems>
             
-            <Frame x:ConnectionId='3' Name="MyFrame" 
+            <Frame Name="MyFrame" 
                    Background="WhiteSmoke"/>
-        </NavigationView>
+        </NavigationView>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel>
+            <Button x:ConnectionId='7' Height="40" Width="40" 
+                    FontFamily="Segoe MDL2 Assets" 
+                    Content="" 
+                    FontWeight="Bold"
+                    Name="HamburgerButton" 
+                                                 />
+            <TextBlock x:ConnectionId='8' Name="HumburgerTB" 
+                       Text="Home" 
+                       VerticalAlignment="Center" 
+                       RelativePanel.RightOf="HamburgerButton"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"
+                       Margin="15,0,0,0"/>
+            <TextBlock x:ConnectionId='9' Name="DateNowTextBlock" 
+                       FontSize="18"
+                       RelativePanel.AlignRightWithPanel="True" 
+                       FontWeight="Thin" 
+                       Margin="5"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        </RelativePanel>
+        <SplitView x:ConnectionId='2' Grid.Row="1"
+                   Name="MySplitView" 
+                   CompactPaneLength="40"
+                   DisplayMode="Overlay">
+            <SplitView.Pane>
+                <Grid>
+                    <ListBox x:ConnectionId='3' Name="MyListBox" 
+                             ScrollViewer.VerticalScrollBarVisibility="Auto"
+                             ScrollViewer.VerticalScrollMode="Auto">
+                        <ListBoxItem x:ConnectionId='5'                          
+                                     Name="listitem1">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text=""
+                                           FontFamily="Segoe MDL2 Assets"  />
+                                <TextBlock Text="Home"
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListBox>
+                    <ListView Margin="-10,0,0,0"
+                              BorderBrush="LightGray"
+                              BorderThickness="0,1,0,0" 
+                              VerticalAlignment="Bottom"
+                              HorizontalAlignment="Stretch"
+                              SelectionMode="None" >
+                        <ListBoxItem x:ConnectionId='4'                            >
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="" 
+                                           FontFamily="Segoe MDL2 Assets" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock Text="Settings"  
+                                           Margin="30,0,0,0"
+                                           VerticalAlignment="Center"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </ListView>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                    <Frame x:ConnectionId='6' Name="myFrame1" 
+                           Background="WhiteSmoke"/>
+            </SplitView.Content>
+        </SplitView>
 
     </Grid>
 </Page>
