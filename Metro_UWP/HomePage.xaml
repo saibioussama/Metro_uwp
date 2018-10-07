@@ -22,79 +22,84 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Pivot Margin="10" 
-               Name="MyPivot"
-               Background="White"
-               SelectionChanged="MyPivot_SelectionChanged">
-            <PivotItem>
-                <PivotItem.Header > 
-                    Sousse - Mahdia
-                </PivotItem.Header>
-                <PivotItem.Content>
-                    <Grid Padding="10">
-                        <GridView Name="MyListView_sm"
+        <Grid Margin="5" 
+              Background="White"
+              BorderBrush="#eee"
+              BorderThickness="1">
+            <Pivot Name="MyPivot"
+                   SelectionChanged="MyPivot_SelectionChanged">
+                <PivotItem>
+                    <PivotItem.Header >
+                        Sousse - Mahdia
+                    </PivotItem.Header>
+                    <PivotItem.Content>
+                        <Grid Padding="10">
+                            <GridView Name="MyListView_sm"
                                   ItemClick="MyListView_ItemClick"
                                   IsItemClickEnabled="True"
                                   ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
-                           
-                            <GridView.ItemTemplate>
-                                <DataTemplate x:DataType="DataType:Station">
-                                    <StackPanel Padding="10"
+
+                                <GridView.ItemTemplate>
+                                    <DataTemplate x:DataType="DataType:Station">
+                                        <StackPanel Padding="10"
                                                 Margin="5"
                                                 Width="250"
                                                 HorizontalAlignment="Stretch"
                                                 Background="WhiteSmoke"
                                                 BorderThickness="1"
                                                 BorderBrush="#eee">
-                                        <TextBlock Text="{Binding NameFR}"
+                                            <TextBlock Text="{Binding NameFR}"
                                                    HorizontalAlignment="Center" />
-                                        <TextBlock Text="{Binding NameAR}"
+                                            <TextBlock Text="{Binding NameAR}"
                                                    FontSize="11"
                                                    Foreground="Gray"
                                                    HorizontalAlignment="Center" />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
-                    </Grid>
-                </PivotItem.Content>
-            </PivotItem>
-            <PivotItem>
-                <PivotItem.Header>
-                    Mahdia - Sousse 
-                </PivotItem.Header>
-                <PivotItem.Content>
-                    <Grid Padding="10">
-                        <GridView Name="MyListView_ms" 
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                        </Grid>
+                    </PivotItem.Content>
+                </PivotItem>
+                <PivotItem>
+                    <PivotItem.Header>
+                        Mahdia - Sousse
+                    </PivotItem.Header>
+                    <PivotItem.Content>
+                        <Grid Padding="10">
+                            <GridView Name="MyListView_ms" 
                                   ItemClick="MyListView_ItemClick"
                                   IsItemClickEnabled="True"
                                   ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
-                            <GridView.ItemTemplate>
-                                <DataTemplate x:DataType="DataType:Station">
-                                    <StackPanel Padding="10"
+                                <GridView.ItemTemplate>
+                                    <DataTemplate x:DataType="DataType:Station">
+                                        <StackPanel Padding="10"
                                                 Margin="5"
                                                 Width="250"
                                                 HorizontalAlignment="Stretch"
                                                 Background="WhiteSmoke"
                                                 BorderThickness="1"
                                                 BorderBrush="#eee">
-                                        <TextBlock Text="{Binding NameFR}"
+                                            <TextBlock Text="{Binding NameFR}"
                                                    HorizontalAlignment="Center" />
-                                        <TextBlock Text="{Binding NameAR}"
+                                            <TextBlock Text="{Binding NameAR}"
                                                    FontSize="11"
                                                    Foreground="Gray"
                                                    HorizontalAlignment="Center" />
-                                    </StackPanel>
-                                </DataTemplate>
-                            </GridView.ItemTemplate>
-                        </GridView>
-                    </Grid>
-                </PivotItem.Content>
-            </PivotItem>
-        </Pivot>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </GridView.ItemTemplate>
+                            </GridView>
+                        </Grid>
+                    </PivotItem.Content>
+                </PivotItem>
+            </Pivot>
+        </Grid>
 
         <StackPanel Margin="5"
               Grid.Row="1"
+              BorderBrush="#eee"
+              BorderThickness="1"
               Background="White">
             <StackPanel HorizontalAlignment="Stretch"
                         Background="#eee"
@@ -127,6 +132,8 @@
         <Grid Padding="10" 
               Margin="5"
               Grid.Row="2"
+              BorderBrush="#eee"
+              BorderThickness="1"
               Background="White">
             <GridView Name="TimesGridView"
                       SelectionMode="None"

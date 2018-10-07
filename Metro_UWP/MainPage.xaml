@@ -56,6 +56,7 @@
                                      Name="listitem1">
                             <StackPanel Orientation="Horizontal" >
                                 <TextBlock Text=""
+                                           VerticalAlignment="Center"
                                            FontFamily="Segoe MDL2 Assets"  />
                                 <TextBlock Text="Home"
                                            Margin="30,0,0,0"/>

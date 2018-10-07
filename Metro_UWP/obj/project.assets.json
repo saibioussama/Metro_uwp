@@ -30081,11 +30081,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\saibi\\source\\repos\\Metro_UWP\\Metro_UWP\\Metro_UWP.csproj",
+      "projectUniqueName": "C:\\Users\\saibi\\OneDrive\\Documents\\GitHub\\Metro_uwp\\Metro_UWP\\Metro_UWP.csproj",
       "projectName": "Metro_UWP",
-      "projectPath": "C:\\Users\\saibi\\source\\repos\\Metro_UWP\\Metro_UWP\\Metro_UWP.csproj",
+      "projectPath": "C:\\Users\\saibi\\OneDrive\\Documents\\GitHub\\Metro_uwp\\Metro_UWP\\Metro_UWP.csproj",
       "packagesPath": "C:\\Users\\saibi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\saibi\\source\\repos\\Metro_UWP\\Metro_UWP\\obj\\",
+      "outputPath": "C:\\Users\\saibi\\OneDrive\\Documents\\GitHub\\Metro_uwp\\Metro_UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
