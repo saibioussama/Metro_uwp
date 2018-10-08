@@ -473,3 +473,14 @@ C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\quali
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\qualifiers.txt.intermediate
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\ProjectArchitectures.txt
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Metro_UWP.csprojAssemblyReference.cache
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\StationsPage.xbf
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\StationsPage.g.i.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\StationsPage.g.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\StationsPage.xaml
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\StationsPage.xbf
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\TimesPage.xbf
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\TimesPage.g.i.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\TimesPage.g.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\TimesPage.xaml
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\TimesPage.xbf

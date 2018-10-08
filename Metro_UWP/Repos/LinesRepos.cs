@@ -46,7 +46,7 @@ namespace Metro_UWP.Repos
                 if (times.Count == 0)
                     foreach (var line in lines)
                         if (line.Times[stationId - 1] != null && line.Times[stationId - 1] < DateTime.Now)
-                            times.Add(line.Times[stationId - 1]);
+                            times.Add(line.Times[stationId - 1].Value.AddDays(1));
             }
             catch
             {

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,13 +24,26 @@ namespace Metro_UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public delegate void OnSearchBoxTextChangedDelegate(string QueryText);
+
+        public static event OnSearchBoxTextChangedDelegate OnSearchBoxTextChanged;
+
         public MainPage()
         {
             this.InitializeComponent();
             myFrame1.Navigate(typeof(HomePage));
-            //MyFrame.Navigate(typeof(HomePage));
+            TimesPage.HideSearchBox += () =>
+            {
+                mySearchBox.Visibility = Visibility.Collapsed;
+            };
+            TimesPage.ShowSearchBox += () =>
+            {
+                mySearchBox.Visibility = Visibility.Visible;
+            };
         }
 
+        
         //private void MyNavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         //{
         //    var item = args.SelectedItem as NavigationViewItem;
@@ -64,9 +78,10 @@ namespace Metro_UWP
 
         private void listitem1_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            HumburgerTB.Text = "Acceuil";
+            HumburgerTB.Text = "Home";
             myFrame1.Navigate(typeof(HomePage));
             MySplitView.IsPaneOpen = false;
+            mySearchBox.Visibility = Visibility.Visible;
         }
 
         private void listitem5_Tapped(object sender, TappedRoutedEventArgs e)
@@ -77,6 +92,7 @@ namespace Metro_UWP
 
             MySplitView.IsPaneOpen = false;
             MyListBox.SelectedItem = false;
+            mySearchBox.Visibility = Visibility.Collapsed;
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -86,6 +102,24 @@ namespace Metro_UWP
                 await StorageRepos.GetData();
             }
             catch (Exception ex) { }
+        }
+
+        private void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
+        {
+            OnSearchBoxTextChanged?.Invoke(args.QueryText);
+        }
+
+        private void mySearchBox_QueryChanged(SearchBox sender, SearchBoxQueryChangedEventArgs args)
+        {
+            OnSearchBoxTextChanged?.Invoke(args.QueryText);
+        }
+
+        private void listitem2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            HumburgerTB.Text = "Stations";
+            myFrame1.Navigate(typeof(StationsPage));
+            MySplitView.IsPaneOpen = false;
+            mySearchBox.Visibility = Visibility.Visible;
         }
     }
 

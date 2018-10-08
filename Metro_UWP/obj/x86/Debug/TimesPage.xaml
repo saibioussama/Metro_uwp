@@ -1,0 +1,73 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Metro_UWP.TimesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Metro_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:conv="using:Metro_UWP.Models" 
+    mc:Ignorable="d"  
+                        
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Page.Resources>
+        <conv:Helper x:ConnectionId='2' x:Name="DateToStringFormatConverter"/>
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplate">
+            <ItemsStackPanel />
+        </ItemsPanelTemplate>
+    </Page.Resources>
+    
+    <Grid Margin="5"
+          BorderBrush="#eee"
+          BorderThickness="1"
+          Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="White"  
+              Grid.Row="0"
+              Padding="10">
+            <TextBlock x:ConnectionId='5' VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Name="DirectionTB"
+                       Text="Direction"/>
+        </Grid>
+        
+        <Grid Background="WhiteSmoke" 
+              Grid.Row="1"
+              Padding="10">
+            <TextBlock x:ConnectionId='4' FontWeight="Light"
+                       FontSize="32"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Name="StationNameTB"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <GridView x:ConnectionId='3' Name="TimesGridView"
+                      SelectionMode="None"
+                      ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
+                <GridView.ItemTemplate>
+                    <DataTemplate >
+                        <StackPanel Padding="10"
+                                    Margin="-1"
+                                    Width="200"
+                                    HorizontalAlignment="Stretch"
+                                    BorderThickness="0,1,0,1"
+                                    BorderBrush="#eee">
+                            <TextBlock HorizontalAlignment="Center" 
+                                       Text="{Binding  Converter={StaticResource DateToStringFormatConverter}}"
+                                       FontSize="22"
+                                       FontWeight="Light"  />
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </Grid>
+        
+    </Grid>
+</Page>
+

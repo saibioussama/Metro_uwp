@@ -2605,46 +2605,6 @@ namespace Windows.Globalization
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 		}
 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Hour")]
-		public int get_Hour()
-		{
-			int __retVal = global::Windows.Globalization.ICalendar__Impl.Stubs.get_Hour(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Hour")]
-		public void put_Hour(int value)
-		{
-			global::Windows.Globalization.ICalendar__Impl.Stubs.put_Hour(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Minute")]
-		public int get_Minute()
-		{
-			int __retVal = global::Windows.Globalization.ICalendar__Impl.Stubs.get_Minute(this);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			return __retVal;
-		}
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Minute")]
-		public void put_Minute(int value)
-		{
-			global::Windows.Globalization.ICalendar__Impl.Stubs.put_Minute(
-								this, 
-								value
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-		}
-
 		public Calendar(global::System.IntPtr dummy)
 		{
 		}
@@ -2879,22 +2839,6 @@ namespace Windows.Globalization
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
 		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Day")]
 		void put_Day(int value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Hour")]
-		int get_Hour();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Hour")]
-		void put_Hour(int value);
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Minute")]
-		int get_Minute();
-
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Minute")]
-		void put_Minute(int value);
 	}
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
@@ -15476,11 +15420,85 @@ namespace Windows.UI.Xaml.Data
 	}
 
 	[global::System.Runtime.CompilerServices.DependencyReductionConditionallyDependent(typeof(global::Windows.UI.Xaml.Data.IBinding))]
-	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(0)]
+	[global::System.Runtime.InteropServices.McgWindowsRuntimeVersion(65536)]
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe class Binding : global::Windows.UI.Xaml.Data.BindingBase, global::Windows.UI.Xaml.Data.IBinding
 	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.NoInlining)]
+		public Binding() : 
+				base(default(global::System.IntPtr))
+		{
+			global::System.IntPtr retval;
+			retval = __Factory_Windows_UI_Xaml_Data__IBindingFactory_CreateInstance("Windows.UI.Xaml.Data.Binding");
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			this.__AttachAndRelease(retval);
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::System.IntPtr __Factory_Windows_UI_Xaml_Data__IBindingFactory_CreateInstance(string typeName)
+		{
+			global::System.IntPtr innerInspectable;
+			global::System.IntPtr outerInspectable = default(global::System.IntPtr);
+			if (global::System.Runtime.InteropServices.McgMarshal.IsOfType(
+								this, 
+								typeof(global::Windows.UI.Xaml.Data.Binding).TypeHandle
+							))
+			{
+				global::System.IntPtr __pRetVal_NoAggregation;
+				__pRetVal_NoAggregation = global::Windows.UI.Xaml.Data.IBindingFactory__Impl.Stubs.CreateInstance(
+									global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+														typeName, 
+														typeof(global::Windows.UI.Xaml.Data.IBindingFactory).TypeHandle
+													), 
+									outerInspectable, 
+									out innerInspectable
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(innerInspectable);
+				global::__Interop.McgHelpers.GetIUnknownForFactoryReturn(ref __pRetVal_NoAggregation);
+				return __pRetVal_NoAggregation;
+			}
+			else
+			{
+				outerInspectable = global::System.Runtime.InteropServices.McgMarshal.GetOuterIInspectableForManagedObject(this);
+				global::System.IntPtr __pRetVal_WithAggregation;
+				__pRetVal_WithAggregation = global::Windows.UI.Xaml.Data.IBindingFactory__Impl.Stubs.CreateInstance(
+									global::System.Runtime.InteropServices.McgMarshal.GetActivationFactory(
+														typeName, 
+														typeof(global::Windows.UI.Xaml.Data.IBindingFactory).TypeHandle
+													), 
+									outerInspectable, 
+									out innerInspectable
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(outerInspectable);
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(__pRetVal_WithAggregation);
+				return innerInspectable;
+			}
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Converter")]
+		public virtual global::Windows.UI.Xaml.Data.IValueConverter get_Converter()
+		{
+			global::Windows.UI.Xaml.Data.IValueConverter __retVal = global::Windows.UI.Xaml.Data.IBinding__Impl.Stubs.get_Converter(this);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			return __retVal;
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Converter")]
+		public virtual void put_Converter(global::Windows.UI.Xaml.Data.IValueConverter value)
+		{
+			global::Windows.UI.Xaml.Data.IBinding__Impl.Stubs.put_Converter(
+								this, 
+								value
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+		}
+
 		public Binding(global::System.IntPtr dummy) : 
 				base(dummy)
 		{
@@ -15514,8 +15532,25 @@ namespace Windows.UI.Xaml.Data
 
 	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
 	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
+	public unsafe interface IBindingFactory
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		global::System.IntPtr CreateInstance(
+					global::System.IntPtr outer, 
+					out global::System.IntPtr inner);
+	}
+
+	[global::Internal.Reflection.MetadataTransformed(global::Internal.Reflection.MetadataTransformation.OriginallyForeignObject)]
+	[global::Internal.Reflection.ExplicitScope("Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime")]
 	public unsafe interface IBinding
 	{
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertyGet, "Converter")]
+		global::Windows.UI.Xaml.Data.IValueConverter get_Converter();
+
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgAccessor(global::System.Runtime.InteropServices.McgAccessorKind.PropertySet, "Converter")]
+		void put_Converter(global::Windows.UI.Xaml.Data.IValueConverter value);
 	}
 }
 

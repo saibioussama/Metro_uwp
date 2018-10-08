@@ -12,6 +12,7 @@
           Margin="5"
           Background="White">
         <TextBlock>Setting </TextBlock>
+        
     </Grid>
 </Page>
 

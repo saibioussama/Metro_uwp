@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,7 +42,7 @@ namespace Metro_UWP
         private void Timer_Tick(object sender, object e)
         {
             if (AvailableTimesOfStation != null && AvailableTimesOfStation.Count > 0)
-                RemainingTimeTB.Text = (AvailableTimesOfStation.First() - DateTime.Now).ToString().Substring(0, 8);
+                RemainingTimeTB.Text = (AvailableTimesOfStation.First() - DateTime.Now).Value.ToString("hh\\:mm\\:ss");
             else
                 RemainingTimeTB.Text = "--:--:--";
         }
@@ -57,12 +58,35 @@ namespace Metro_UWP
                 SelectedStation = stations_sm?.First();
                 AvailableTimesOfStation = await GetAvailableTimesOfStation(MyPivot.SelectedIndex == 0 ? Station.Directions.SM : Station.Directions.MS, SelectedStation.Id);
                 UpdateInformation();
+                MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
             }
             catch (Exception ex)
             {
 
             }
             timer.Start();
+        }
+
+        private async void MainPage_OnSearchBoxTextChanged(string QueryText)
+        {
+            if (QueryText.Length > 0)
+            {
+                switch (MyPivot.SelectedIndex)
+                {
+                    case 0:
+                        MyListView_sm.ItemsSource = stations_sm.Where(s => s.NameAR.ToLower().Contains(QueryText.ToLower()) || s.NameFR.ToLower().Contains(QueryText.ToLower()));
+                        break;
+                    case 1:
+                        MyListView_ms.ItemsSource = stations_ms.Where(s => s.NameAR.ToLower().Contains(QueryText.ToLower()) || s.NameFR.ToLower().Contains(QueryText.ToLower()));
+                        break;
+                    default: break;
+                }
+            }
+            else
+            {
+                MyListView_sm.ItemsSource = stations_sm;
+                MyListView_ms.ItemsSource = stations_ms;
+            }
         }
 
         private async void MyListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -95,10 +119,12 @@ namespace Metro_UWP
                 {
                     case 0:
                         SelectedStation = stations_sm.First();
+                        MyListView_sm.ItemsSource = stations_sm;
                         AvailableTimesOfStation = await GetAvailableTimesOfStation(Station.Directions.SM, SelectedStation.Id);
                         break;
                     case 1:
                         SelectedStation = stations_ms.First();
+                        MyListView_ms.ItemsSource = stations_ms;
                         AvailableTimesOfStation = await GetAvailableTimesOfStation(Station.Directions.MS, SelectedStation.Id);
                         break;
                     default: break;

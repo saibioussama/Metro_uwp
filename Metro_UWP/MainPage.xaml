@@ -36,12 +36,15 @@
                        RelativePanel.RightOf="HamburgerButton"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        Margin="15,0,0,0"/>
-            <TextBlock Name="DateNowTextBlock" 
-                       FontSize="18"
+            <SearchBox x:Name="mySearchBox" 
+                       FocusOnKeyboardInput="True"
+                       QuerySubmitted="mySearchBox_QuerySubmitted"
+                       SearchHistoryEnabled="True"
+                       Margin="5,0,5,0"
+                       Width="200"
+                       PlaceholderText="Search ..."
                        RelativePanel.AlignRightWithPanel="True" 
-                       FontWeight="Thin" 
-                       Margin="5"
-                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+                       RelativePanel.AlignVerticalCenterWithPanel="True" QueryChanged="mySearchBox_QueryChanged"/>
         </RelativePanel>
         <SplitView Grid.Row="1"
                    Name="MySplitView" 
@@ -59,6 +62,16 @@
                                            VerticalAlignment="Center"
                                            FontFamily="Segoe MDL2 Assets"  />
                                 <TextBlock Text="Home"
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem Tapped="listitem2_Tapped"
+                                     Name="listitem2">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text=""
+                                           VerticalAlignment="Center"
+                                           FontFamily="Segoe MDL2 Assets"  />
+                                <TextBlock Text="Stations"
                                            Margin="30,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>

@@ -25728,54 +25728,6 @@ namespace Windows.Globalization
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static int get_Hour(global::System.__ComObject __this)
-			{
-				int __ret = global::__Interop.ForwardComStubs.Stub_21<global::Windows.Globalization.ICalendar>(
-									__this, 
-									73
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Hour(
-						global::System.__ComObject __this, 
-						int value)
-			{
-				global::__Interop.ForwardComStubs.Stub_46<global::Windows.Globalization.ICalendar>(
-									__this, 
-									value, 
-									74
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static int get_Minute(global::System.__ComObject __this)
-			{
-				int __ret = global::__Interop.ForwardComStubs.Stub_21<global::Windows.Globalization.ICalendar>(
-									__this, 
-									78
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				return __ret;
-			}
-
-			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-			public static void put_Minute(
-						global::System.__ComObject __this, 
-						int value)
-			{
-				global::__Interop.ForwardComStubs.Stub_46<global::Windows.Globalization.ICalendar>(
-									__this, 
-									value, 
-									79
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			}
 		}
 	}
 
@@ -38136,6 +38088,62 @@ namespace Windows.UI.Xaml.Data
 				static readonly byte[] RVA_Windows_UI_Xaml_Data_IValueConverter__Impl_Vtbl_s_staticVtable = new byte[] {
 						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Data.IBindingFactory
+	public unsafe static class IBindingFactory__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Data.IBindingFactory'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::System.IntPtr CreateInstance(
+						global::System.__ComObject __this, 
+						global::System.IntPtr outer, 
+						out global::System.IntPtr inner)
+			{
+				global::System.IntPtr __ret = global::__Interop.ForwardComStubs.Stub_4<global::Windows.UI.Xaml.Data.IBindingFactory>(
+									__this, 
+									outer, 
+									out inner, 
+									6
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+		}
+	}
+
+	// Windows.UI.Xaml.Data.IBinding
+	public unsafe static class IBinding__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Data.IBinding'
+		public static partial class Stubs
+		{
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static global::Windows.UI.Xaml.Data.IValueConverter get_Converter(global::System.__ComObject __this)
+			{
+				global::Windows.UI.Xaml.Data.IValueConverter __ret = global::__Interop.ForwardComStubs.Stub_10<global::Windows.UI.Xaml.Data.IBinding, global::Windows.UI.Xaml.Data.IValueConverter>(
+									__this, 
+									16
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				return __ret;
+			}
+
+			[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+			public static void put_Converter(
+						global::System.__ComObject __this, 
+						global::Windows.UI.Xaml.Data.IValueConverter value)
+			{
+				global::__Interop.ForwardComStubs.Stub_5<global::Windows.UI.Xaml.Data.IBinding, global::Windows.UI.Xaml.Data.IValueConverter>(
+									__this, 
+									value, 
+									17
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			}
 		}
 	}

@@ -16,7 +16,7 @@ namespace Metro_UWP.Models
                 return null;
 
             DateTime dt = DateTime.Parse(value.ToString());
-            return dt.ToString("HH:mm:ss");
+            return dt.ToString("HH:mm");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

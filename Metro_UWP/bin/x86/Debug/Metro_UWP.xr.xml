@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="Minute" />
-    <RootPropertyPathName Name="Hour" />
     <RootPropertyPathName Name="NameAR" />
     <RootPropertyPathName Name="NameFR" />
   </Roots.PropertyPathNames>
@@ -17,6 +18,7 @@
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Metro_UWP.Models.Helper" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -24,32 +26,27 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Padding" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Items" />
-      <RootEvent Name="SelectionChanged" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Margin" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="BorderBrush" />
       <RootProperty Name="Padding" />
       <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Name" />
@@ -66,18 +63,25 @@
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Name" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Inlines" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Converter" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Items" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
       <RootProperty Name="Content" />
@@ -136,7 +140,18 @@
       <RootProperty Name="FontWeight" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
+      <RootProperty Name="FocusOnKeyboardInput" />
+      <RootProperty Name="SearchHistoryEnabled" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="PlaceholderText" />
+      <RootEvent Name="QuerySubmitted" />
+      <RootEvent Name="QueryChanged" />
+    </RootType>
     <RootType FullName="Metro_UWP.MainPage" />
     <RootType FullName="Metro_UWP.SettingsPage" />
+    <RootType FullName="Metro_UWP.StationsPage" />
+    <RootType FullName="Metro_UWP.TimesPage" />
   </Roots.RootTypes>
 </Roots>

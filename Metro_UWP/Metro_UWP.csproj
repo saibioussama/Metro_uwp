@@ -118,6 +118,12 @@
     <Compile Include="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="StationsPage.xaml.cs">
+      <DependentUpon>StationsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimesPage.xaml.cs">
+      <DependentUpon>TimesPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -151,6 +157,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="SettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StationsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimesPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

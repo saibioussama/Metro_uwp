@@ -430,6 +430,12 @@
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\StationsPage.xbf">
+      <PackagePath>StationsPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\TimesPage.xbf">
+      <PackagePath>TimesPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

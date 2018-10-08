@@ -132,19 +132,27 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "Metro_UWP.HomePage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Metro_UWP.MainPage";
-            _typeNameTable[4] = "Metro_UWP.SettingsPage";
+            _typeNameTable = new string[9];
+            _typeNameTable[0] = "Metro_UWP.Models.Helper";
+            _typeNameTable[1] = "Object";
+            _typeNameTable[2] = "Metro_UWP.HomePage";
+            _typeNameTable[3] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[5] = "Metro_UWP.MainPage";
+            _typeNameTable[6] = "Metro_UWP.SettingsPage";
+            _typeNameTable[7] = "Metro_UWP.StationsPage";
+            _typeNameTable[8] = "Metro_UWP.TimesPage";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::Metro_UWP.HomePage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Metro_UWP.MainPage);
-            _typeTable[4] = typeof(global::Metro_UWP.SettingsPage);
+            _typeTable = new global::System.Type[9];
+            _typeTable[0] = typeof(global::Metro_UWP.Models.Helper);
+            _typeTable[1] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::Metro_UWP.HomePage);
+            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[5] = typeof(global::Metro_UWP.MainPage);
+            _typeTable[6] = typeof(global::Metro_UWP.SettingsPage);
+            _typeTable[7] = typeof(global::Metro_UWP.StationsPage);
+            _typeTable[8] = typeof(global::Metro_UWP.TimesPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,9 +187,12 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_HomePage() { return new global::Metro_UWP.HomePage(); }
-        private object Activate_3_MainPage() { return new global::Metro_UWP.MainPage(); }
-        private object Activate_4_SettingsPage() { return new global::Metro_UWP.SettingsPage(); }
+        private object Activate_0_Helper() { return new global::Metro_UWP.Models.Helper(); }
+        private object Activate_2_HomePage() { return new global::Metro_UWP.HomePage(); }
+        private object Activate_5_MainPage() { return new global::Metro_UWP.MainPage(); }
+        private object Activate_6_SettingsPage() { return new global::Metro_UWP.SettingsPage(); }
+        private object Activate_7_StationsPage() { return new global::Metro_UWP.StationsPage(); }
+        private object Activate_8_TimesPage() { return new global::Metro_UWP.TimesPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -193,31 +204,56 @@ namespace Metro_UWP.Metro_UWP_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Metro_UWP.HomePage
-                userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_HomePage;
+            case 0:   //  Metro_UWP.Models.Helper
+                userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_Helper;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Object
                 xamlType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  Metro_UWP.MainPage
+            case 2:   //  Metro_UWP.HomePage
                 userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_2_HomePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Metro_UWP.SettingsPage
+            case 3:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  Metro_UWP.MainPage
                 userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_SettingsPage;
+                userType.Activator = Activate_5_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Metro_UWP.SettingsPage
+                userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_SettingsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Metro_UWP.StationsPage
+                userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_StationsPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Metro_UWP.TimesPage
+                userType = new global::Metro_UWP.Metro_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_8_TimesPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

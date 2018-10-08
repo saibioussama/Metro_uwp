@@ -8,9 +8,9 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>1efe506b-b614-47ee-afc1-83247240bd45</PackageIdentityName>
-    <PackageIdentityPublisher>CN=saibi</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityName>524e24c5-0fcb-49fe-9546-f511da483094</PackageIdentityName>
+    <PackageIdentityPublisher>CN=82A12399-115A-43F2-A31B-62B693A405B7</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,26 +18,26 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>916549238D5762B0D3911E7D8CC813BCAA119D6F968376C571C88C1E1A270D87</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>1efe506b-b614-47ee-afc1-83247240bd45_1.0.0.0_x86__ra9arqbs2fyqy</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>1efe506b-b614-47ee-afc1-83247240bd45_ra9arqbs2fyqy!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>1efe506b-b614-47ee-afc1-83247240bd45</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=saibi</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <LayoutDir>C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>612E899200F02B7880AEE59D55F24087226FE16E8814F0A27B2F1FD193A47D6B</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>32840OussamaSAIBI.514110F1AB3D_1.1.1.0_x86__274rvj1ptth6a</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>32840OussamaSAIBI.514110F1AB3D_274rvj1ptth6a!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>32840OussamaSAIBI.514110F1AB3D</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=82A12399-115A-43F2-A31B-62B693A405B7</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.1.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-07T14:36:30.707</Modified>
+      <Modified>2018-10-08T20:40:13.503</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\Metro_UWP.exe">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Metro_UWP.exe">
       <PackagePath>entrypoint\Metro_UWP.exe</PackagePath>
-      <Modified>2018-10-07T14:36:28.329</Modified>
+      <Modified>2018-10-08T20:40:13.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -519,76 +519,84 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T22:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-10-06T15:03:30.682</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-09-26T21:28:37.845</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-26T21:28:37.845</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-26T21:28:37.861</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-26T21:28:37.863</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-24T22:27:20.799</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-24T22:27:20.799</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-09-26T21:28:37.872</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\Metro_UWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Metro_UWP.xr.xml">
       <PackagePath>Metro_UWP.xr.xml</PackagePath>
-      <Modified>2018-10-07T14:36:28.077</Modified>
+      <Modified>2018-10-08T20:33:32.378</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-10-07T14:36:28.098</Modified>
+      <Modified>2018-10-08T12:02:03.296</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\HomePage.xbf">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\HomePage.xbf">
       <PackagePath>HomePage.xbf</PackagePath>
-      <Modified>2018-10-07T14:36:28.099</Modified>
+      <Modified>2018-10-08T20:15:52.859</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-10-07T14:36:28.100</Modified>
+      <Modified>2018-10-08T13:19:12.461</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\SettingsPage.xbf">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
-      <Modified>2018-10-07T14:36:28.101</Modified>
+      <Modified>2018-10-08T20:15:52.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\StationsPage.xbf">
+      <PackagePath>StationsPage.xbf</PackagePath>
+      <Modified>2018-10-08T20:15:52.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\TimesPage.xbf">
+      <PackagePath>TimesPage.xbf</PackagePath>
+      <Modified>2018-10-08T20:40:12.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-19T21:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-07T14:36:30.012</Modified>
+      <Modified>2018-10-08T20:15:55.840</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\source\repos\Metro_UWP\Metro_UWP\bin\x86\Debug\Core\Metro_UWP.exe">
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Core\Metro_UWP.exe">
       <PackagePath>Metro_UWP.exe</PackagePath>
-      <Modified>2018-10-07T14:36:30.704</Modified>
+      <Modified>2018-10-08T20:40:13.499</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

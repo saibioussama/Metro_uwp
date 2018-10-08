@@ -12,6 +12,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
   
     <Page.Resources>
+        <conv:Helper x:ConnectionId='2' x:Name="DateToStringFormatConverter"/>
         <ItemsPanelTemplate x:Key="ItemsPanelTemplate">
             <ItemsStackPanel />
         </ItemsPanelTemplate>
@@ -26,7 +27,7 @@
               Background="White"
               BorderBrush="#eee"
               BorderThickness="1">
-            <Pivot x:ConnectionId='5' Name="MyPivot"
+            <Pivot x:ConnectionId='6' Name="MyPivot"
                                                               >
                 <PivotItem>
                     <PivotItem.Header >
@@ -34,7 +35,7 @@
                     </PivotItem.Header>
                     <PivotItem.Content>
                         <Grid Padding="10">
-                            <GridView x:ConnectionId='7' Name="MyListView_sm"
+                            <GridView x:ConnectionId='8' Name="MyListView_sm"
                                                                   
                                   IsItemClickEnabled="True"
                                   ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
@@ -67,7 +68,7 @@
                     </PivotItem.Header>
                     <PivotItem.Content>
                         <Grid Padding="10">
-                            <GridView x:ConnectionId='6' Name="MyListView_ms" 
+                            <GridView x:ConnectionId='7' Name="MyListView_ms" 
                                                                   
                                   IsItemClickEnabled="True"
                                   ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
@@ -104,7 +105,7 @@
             <StackPanel HorizontalAlignment="Stretch"
                         Background="#eee"
                         Padding="10">
-                <TextBlock x:ConnectionId='4' HorizontalAlignment="Center"
+                <TextBlock x:ConnectionId='5' HorizontalAlignment="Center"
                        Name="StationName" />
             </StackPanel>
             <StackPanel Padding="10">
@@ -113,15 +114,15 @@
                     <TextBlock FontFamily="Segoe MDL2 Assets"
                                Text=""
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               />
+                               VerticalAlignment="Center"/>
 
                     <TextBlock Foreground="Gray"
                                HorizontalAlignment="Center"
                                Text="remaining time"
+                               VerticalAlignment="Center"
                                Margin="5"/>     
                 </StackPanel>
-                <TextBlock x:ConnectionId='3' HorizontalAlignment="Center"
+                <TextBlock x:ConnectionId='4' HorizontalAlignment="Center"
                            Name="RemainingTimeTB"
                            Text="--:--:--"
                            FontSize="28"
@@ -135,29 +136,22 @@
               BorderBrush="#eee"
               BorderThickness="1"
               Background="White">
-            <GridView x:ConnectionId='2' Name="TimesGridView"
+            <GridView x:ConnectionId='3' Name="TimesGridView"
                       SelectionMode="None"
                       ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
                 <GridView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Margin="5"
-                                    Orientation="Horizontal"
-                                    HorizontalAlignment="Center"
-                                    Background="WhiteSmoke"
-                                    BorderThickness="1"
-                                    BorderBrush="#eee"
-                                    Padding="40,10,40,10">
-                            <TextBlock Text="{Binding Hour}"
-                                FontWeight="Light" 
-                                FontSize="20"
-                                />
-                            <TextBlock Text=":" 
-                                FontSize="20"
-                                FontWeight="Light"/>
-                            <TextBlock Text="{Binding Minute}"
-                                FontSize="20"
-                                FontWeight="Light"/>
-                         </StackPanel>
+                    <DataTemplate >
+                        <StackPanel Padding="10"
+                                    Margin="-1"
+                                    Width="200"
+                                    HorizontalAlignment="Stretch"
+                                    BorderThickness="0,1,0,1"
+                                    BorderBrush="#eee">
+                            <TextBlock HorizontalAlignment="Center" 
+                                       Text="{Binding  Converter={StaticResource DateToStringFormatConverter}}"
+                                       FontSize="22"
+                                       FontWeight="Light"  />
+                        </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
             </GridView>
