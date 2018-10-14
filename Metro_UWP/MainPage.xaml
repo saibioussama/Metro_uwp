@@ -75,6 +75,17 @@
                                            Margin="30,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
+
+                        <ListBoxItem Tapped="listitem3_Tapped"
+                                     Name="listitem3">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text=""
+                                           VerticalAlignment="Center"
+                                           FontFamily="Segoe MDL2 Assets"  />
+                                <TextBlock Text="Map"
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
                     </ListBox>
                     <ListView Margin="-10,0,0,0"
                               BorderBrush="LightGray"

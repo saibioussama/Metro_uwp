@@ -123,6 +123,14 @@ namespace Metro_UWP
             MySplitView.IsPaneOpen = false;
             mySearchBox.Visibility = Visibility.Visible;
         }
+
+        private void listitem3_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            HumburgerTB.Text = "Map";
+            myFrame1.Navigate(typeof(MapPage));
+            MySplitView.IsPaneOpen = false;
+            mySearchBox.Visibility = Visibility.Visible;
+        }
     }
 
 }

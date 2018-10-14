@@ -9,11 +9,6 @@
                         
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
-    <Page.Resources>
-        <ItemsPanelTemplate x:Key="ItemsPanelTemplate">
-            <ItemsStackPanel/>
-        </ItemsPanelTemplate>
-    </Page.Resources>
     
     <Grid Margin="5" 
           Background="White"
@@ -34,23 +29,25 @@
             </TextBlock>
         </Grid>
 
-        <GridView x:ConnectionId='2' Name="DevelopedByListView"
-                  Grid.Row="1"
-                  Padding="10"
-                  ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
-            <GridView.ItemTemplate>
+        <ListBox x:ConnectionId='2' Name="DevelopedByListView"
+                 Grid.Row="1"
+                 Background="White">
+            <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Padding="20" >
+                    <StackPanel>
                         <TextBlock Text="{Binding Item1}"
-                                   FontSize="18" />
+                                   
+                                   FontSize="18" 
+                                   Margin="5"/>
                         <TextBlock Text="{Binding Item2}"
                                    FontWeight="Light"
                                    Foreground="Gray" 
-                                   FontSize="14" />
+                                   FontSize="14" 
+                                   Margin="5"/>
                     </StackPanel>
                 </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+            </ListBox.ItemTemplate>
+        </ListBox>
         
     </Grid>
 </Page>

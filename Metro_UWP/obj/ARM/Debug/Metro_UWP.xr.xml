@@ -51,6 +51,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Orientation" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Name" />
@@ -145,8 +146,9 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Content" />
       <RootProperty Name="FontWeight" />
-      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
@@ -159,15 +161,22 @@
       <RootEvent Name="QueryChanged" />
     </RootType>
     <RootType FullName="Metro_UWP.MainPage" />
-    <RootType FullName="Metro_UWP.SettingsPage" />
-    <RootType FullName="Metro_UWP.SettingsViews.AboutPage" />
-    <RootType FullName="Metro_UWP.SettingsViews.ContactPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
+      <RootProperty Name="Name" />
+      <RootProperty Name="MapServiceToken" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
       <RootProperty Name="Name" />
       <RootProperty Name="IsActive" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Metro_UWP.MapPage" />
+    <RootType FullName="Metro_UWP.SettingsPage" />
+    <RootType FullName="Metro_UWP.SettingsViews.AboutPage" />
+    <RootType FullName="Metro_UWP.SettingsViews.ContactPage" />
     <RootType FullName="Metro_UWP.SettingsViews.UpdatePage" />
     <RootType FullName="Metro_UWP.StationsPage" />
     <RootType FullName="Metro_UWP.TimesPage" />

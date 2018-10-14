@@ -24,19 +24,19 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <RelativePanel>
-            <Button x:ConnectionId='8' Height="40" Width="40" 
+            <Button x:ConnectionId='9' Height="40" Width="40" 
                     FontFamily="Segoe MDL2 Assets" 
                     Content="" 
                     FontWeight="Bold"
                     Name="HamburgerButton" 
                                                  />
-            <TextBlock x:ConnectionId='9' Name="HumburgerTB" 
+            <TextBlock x:ConnectionId='10' Name="HumburgerTB" 
                        Text="Home" 
                        VerticalAlignment="Center" 
                        RelativePanel.RightOf="HamburgerButton"
                        RelativePanel.AlignVerticalCenterWithPanel="True"
                        Margin="15,0,0,0"/>
-            <SearchBox x:ConnectionId='10' x:Name="mySearchBox" 
+            <SearchBox x:ConnectionId='11' x:Name="mySearchBox" 
                        FocusOnKeyboardInput="True"
                                                                   
                        SearchHistoryEnabled="True"
@@ -75,6 +75,17 @@
                                            Margin="30,0,0,0"/>
                             </StackPanel>
                         </ListBoxItem>
+
+                        <ListBoxItem x:ConnectionId='7'                          
+                                     Name="listitem3">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Text=""
+                                           VerticalAlignment="Center"
+                                           FontFamily="Segoe MDL2 Assets"  />
+                                <TextBlock Text="Map"
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                        </ListBoxItem>
                     </ListBox>
                     <ListView Margin="-10,0,0,0"
                               BorderBrush="LightGray"
@@ -96,7 +107,7 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                    <Frame x:ConnectionId='7' Name="myFrame1" 
+                    <Frame x:ConnectionId='8' Name="myFrame1" 
                            Background="WhiteSmoke"/>
             </SplitView.Content>
         </SplitView>

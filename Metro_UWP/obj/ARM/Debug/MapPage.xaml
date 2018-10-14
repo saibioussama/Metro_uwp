@@ -1,0 +1,86 @@
+﻿<Page x:ConnectionId='1' xmlns:my="using:Windows.UI.Xaml.Controls.Maps" 
+    x:Class="Metro_UWP.MapPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Metro_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+                        
+    xmlns:DataType="using:Metro_UWP.Models"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplate">
+            <ItemsStackPanel />
+        </ItemsPanelTemplate>
+    </Page.Resources>
+    
+    <Grid Margin="5"
+          Background="White"
+          BorderBrush="#eee"
+          BorderThickness="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Padding="10">
+            <GridView x:ConnectionId='6' Name="MyListView_sm"      
+                      IsItemClickEnabled="True"
+                      ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}"                                    >
+
+                <GridView.ItemTemplate>
+                    <DataTemplate                              >
+                        <StackPanel Padding="10"
+                                                Margin="5"
+                                                Width="250"
+                                                HorizontalAlignment="Stretch"
+                                                Background="WhiteSmoke"
+                                                BorderThickness="1"
+                                                BorderBrush="#eee">
+                            <TextBlock Text="{Binding NameFR}"
+                                                   HorizontalAlignment="Center" />
+                            <TextBlock Text="{Binding NameAR}"
+                                                   FontSize="11"
+                                                   Foreground="Gray"
+                                                   HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            
+            <my:MapControl x:ConnectionId='2' MapServiceToken="70LcJQGGrBeUBoP9QxP1~FZjenXNkGsgJG8JQ2i2taA~AmGF5WVWkLuslV4SVMsfINolJfbrcT-qJtV1UsjJ2h99YYBitwMo-qlRNpRKwlQB"
+                           Name="MyMap">
+            </my:MapControl>
+
+            <StackPanel VerticalAlignment="Top"
+                        HorizontalAlignment="Right">
+                <Button x:ConnectionId='4' FontFamily="Segoe MDL2 Assets"
+                        Content="" 
+                        FontSize="20"
+                        Margin="5"
+                        Name="LocationBtn"
+                                                 />
+                <Button x:ConnectionId='5' FontFamily="Segoe MDL2 Assets"
+                        Margin="5"
+                        Content=""
+                        FontSize="20"
+                        Name="ThemeBtn"
+                                              />
+            </StackPanel>
+
+
+            <ProgressRing x:ConnectionId='3' Name="MyProgressRing"
+                          IsActive="False"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Width="50"
+                          Height="50"/>
+        </Grid>
+
+    </Grid>
+</Page>
+

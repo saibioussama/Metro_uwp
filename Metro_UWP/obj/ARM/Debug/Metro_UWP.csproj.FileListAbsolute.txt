@@ -499,3 +499,8 @@ C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Setti
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\AboutPage.xbf
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\ContactPage.xbf
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\UpdatePage.xbf
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\MapPage.xbf
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\MapPage.g.i.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\MapPage.g.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\MapPage.xaml
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\MapPage.xbf
