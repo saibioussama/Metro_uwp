@@ -5,6 +5,7 @@
 
 [Files]
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\split.pri"			"resources.pri"
+"C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\NotificationsTemplate.xml"			"NotificationsTemplate.xml"
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\Metro_UWP.exe"			"Metro_UWP.exe"
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\Metro_UWP.dll"			"Metro_UWP.dll"
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\clrcompression.dll"			"clrcompression.dll"
@@ -15,3 +16,4 @@
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\Assets\Square150x150Logo.scale-200.png"			"Assets\Square150x150Logo.scale-200.png"
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\Assets\SplashScreen.scale-200.png"			"Assets\SplashScreen.scale-200.png"
 "C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\Assets\LockScreenLogo.scale-200.png"			"Assets\LockScreenLogo.scale-200.png"
+"C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x64\Release\PackageLayout\Assets\locIcon.png"			"Assets\locIcon.png"

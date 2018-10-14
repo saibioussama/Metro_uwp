@@ -18,4 +18,5 @@ SettingsViews\ContactPage.xbf
 SettingsViews\UpdatePage.xbf
 StationsPage.xbf
 TimesPage.xbf
+NotificationsTemplate.xml
 Properties\Default.rd.xml

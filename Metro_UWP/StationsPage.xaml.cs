@@ -55,13 +55,13 @@ namespace Metro_UWP
                 SelectedStation = stations_sm?.First();
                 MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
             }
         }
 
-        private async void MainPage_OnSearchBoxTextChanged(string QueryText)
+        private void MainPage_OnSearchBoxTextChanged(string QueryText)
         {
             if (QueryText.Length > 0)
             {

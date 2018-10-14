@@ -24,7 +24,6 @@ namespace Metro_UWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
         public delegate void OnSearchBoxTextChangedDelegate(string QueryText);
 
         public static event OnSearchBoxTextChangedDelegate OnSearchBoxTextChanged;
@@ -103,7 +102,7 @@ namespace Metro_UWP
                 await StorageRepos.GetData();
                 myFrame1.Navigate(typeof(HomePage));
             }
-            catch (Exception ex) { }
+            catch (Exception ) { }
         }
 
         private void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)

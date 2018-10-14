@@ -7,10 +7,10 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="32840OussamaSAIBI.514110F1AB3D" Publisher="CN=82A12399-115A-43F2-A31B-62B693A405B7" Version="1.1.1.0" ProcessorArchitecture="arm" />
-  <mp:PhoneIdentity PhoneProductId="524e24c5-0fcb-49fe-9546-f511da483094" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="32840OussamaSAIBI.NewTestingApp" Publisher="CN=82A12399-115A-43F2-A31B-62B693A405B7" Version="1.1.10.0" ProcessorArchitecture="arm" />
+  <mp:PhoneIdentity PhoneProductId="aa12bd69-db56-4448-81c7-89b172bfe5fe" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Metro_Sahel</DisplayName>
+    <DisplayName>NewTestingApp</DisplayName>
     <PublisherDisplayName>Oussama SAIBI</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -24,7 +24,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="Metro_UWP.exe" EntryPoint="Metro_UWP.App">
-      <uap:VisualElements DisplayName="Metro_Sahel" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Metro_UWP" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="NewTestingApp" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Metro_UWP" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"></uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>

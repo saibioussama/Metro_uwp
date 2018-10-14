@@ -1,2 +1,2 @@
-MainPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.1.1.0_ARM.appx
-SymbolPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.1.1.0\Metro_UWP_1.1.1.0_ARM.appxsym
+MainPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0_ARM.appx
+SymbolPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0\Metro_UWP_1.2.0.0_ARM.appxsym

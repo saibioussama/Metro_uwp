@@ -117,8 +117,8 @@ namespace Metro_UWP
                 if (mapLocation.Status == MapLocationFinderStatus.Success)
                 {
                     BasicGeoposition basicGeoposition = new BasicGeoposition();
-                    basicGeoposition.Latitude = position.Coordinate.Latitude;
-                    basicGeoposition.Longitude = position.Coordinate.Longitude;
+                    basicGeoposition.Latitude = position.Coordinate.Point.Position.Latitude;
+                    basicGeoposition.Longitude = position.Coordinate.Point.Position.Longitude;
                     Geopoint point = new Geopoint(basicGeoposition);
                     MapIcon mapIcon = new MapIcon()
                     {
@@ -163,7 +163,7 @@ namespace Metro_UWP
                 ThemeBtn.RequestedTheme = ElementTheme.Light;
                 LocationBtn.RequestedTheme = ElementTheme.Light;
             }
-            ThemeBtn.Content = ThemeBtn.Content == "" ? "" : "";
+            ThemeBtn.Content = ThemeBtn.Content.ToString() == "" ? "" : "";
         }
     }
 }

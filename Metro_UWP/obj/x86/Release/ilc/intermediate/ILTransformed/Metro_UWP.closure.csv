@@ -2,6 +2,7 @@ Metro_UWP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Metro_UWP.McgInterop, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 Microsoft.CSharp, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Microsoft.WindowsAzure.Messaging.Managed, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
 System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -34,6 +35,7 @@ System.Private.CoreLib.DynamicDelegate, Version=4.0.0.0, Culture=neutral, Public
 System.Private.CoreLib.InteropServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Private.CoreLib.Threading, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Private.CoreLib.WinRTInterop, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+System.Private.DataContractSerialization, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Private.DeveloperExperience.AppX, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Private.DispatchProxy, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Private.Interop.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -51,7 +53,11 @@ System.Runtime.InteropServices, Version=4.0.20.0, Culture=neutral, PublicKeyToke
 System.Runtime.InteropServices.WindowsRuntime, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Runtime.Numerics, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Runtime.Serialization.Formatters, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+System.Runtime.Serialization.Generated, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+System.Runtime.Serialization.Generated.Intermediate, Version=4.1.1.1, Culture=neutral, PublicKeyToken=null
+System.Runtime.Serialization.Json, Version=4.0.2.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+System.Runtime.Serialization.Xml, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Runtime.WindowsRuntime, Version=4.0.12.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 System.Runtime.WindowsRuntime.UI.Xaml, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 System.Security.Claims, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -72,3 +78,4 @@ System.Threading.Tasks.Parallel, Version=4.0.1.0, Culture=neutral, PublicKeyToke
 System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Xml.XDocument, Version=4.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 System.Xml.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+System.Xml.XmlSerializer, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a

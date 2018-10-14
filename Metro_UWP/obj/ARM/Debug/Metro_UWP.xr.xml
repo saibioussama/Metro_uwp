@@ -6,6 +6,8 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="NameAR" />
     <RootPropertyPathName Name="NameFR" />
+    <RootPropertyPathName Name="Item4" />
+    <RootPropertyPathName Name="Item3" />
     <RootPropertyPathName Name="Item2" />
     <RootPropertyPathName Name="Item1" />
   </Roots.PropertyPathNames>
@@ -77,6 +79,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="TextAlignment" />
       <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
@@ -112,7 +115,8 @@
       <RootProperty Name="Name" />
       <RootProperty Name="Items" />
       <RootProperty Name="Background" />
-      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
@@ -129,6 +133,9 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="Items" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBoxItem">
       <RootProperty Name="Content" />
@@ -175,6 +182,14 @@
     </RootType>
     <RootType FullName="Metro_UWP.MapPage" />
     <RootType FullName="Metro_UWP.SettingsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="NavigateUri" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+    </RootType>
     <RootType FullName="Metro_UWP.SettingsViews.AboutPage" />
     <RootType FullName="Metro_UWP.SettingsViews.ContactPage" />
     <RootType FullName="Metro_UWP.SettingsViews.UpdatePage" />

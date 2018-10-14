@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Margin="5" 
@@ -15,6 +16,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
         <Grid Padding="10" 
@@ -26,5 +28,66 @@
                 About
             </TextBlock>
         </Grid>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel Padding="15" 
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+                <TextBlock FontFamily="Segoe MDL2 Assets"
+                           FontSize="36"
+                           Foreground="DodgerBlue"
+                           Text=""/>
+                <TextBlock Text="Metro SAHEL"
+                           Margin="20,0,0,0"
+                           VerticalAlignment="Center"
+                           Foreground="DodgerBlue"
+                           FontWeight="Light" FontSize="28"/> 
+            </StackPanel>
+
+
+            <ListBox Background="White"
+                     BorderThickness="0,1,0,0"
+                     BorderBrush="WhiteSmoke">
+                <ListBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Version : "
+                           Margin="5"  />
+                        <TextBlock Name="VersionTextBlock"
+                           Margin="5"
+                           FontWeight="Light"/>
+
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Official web-site : " 
+                           Margin="5"/>
+                        <HyperlinkButton Margin="5"
+                           FontWeight="Light" NavigateUri="http://metrosahel.azurewebsites.net">
+                            http://metrosahel.azurewebsites.net
+                        </HyperlinkButton>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <Button Margin="20"
+                    Name="FeedbackBtn"
+                    Click="FeedbackBtn_Click"
+                    HorizontalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Text=""
+                               FontSize="16"
+                               Margin="10"
+                               VerticalAlignment="Center"
+                               FontFamily="Segoe MDL2 Assets"/>
+                    <TextBlock Text="Feedback"
+                               TextAlignment="Center"
+                               FontWeight="Light"
+                               FontSize="16"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

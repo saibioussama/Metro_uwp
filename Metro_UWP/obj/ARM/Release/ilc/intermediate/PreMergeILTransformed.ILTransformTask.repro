@@ -1,5 +1,5 @@
 FullName=Microsoft.Build.ILTasks.ILTransformInternalTask
-InputAssembly=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Release\ilc\in\Metro_UWP.exe;C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Release\ilc\in\Newtonsoft.Json.dll
+InputAssembly=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Release\ilc\in\Metro_UWP.exe;C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Release\ilc\in\Microsoft.WindowsAzure.Messaging.Managed.dll;C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Release\ilc\in\Newtonsoft.Json.dll
 OutputAssembly=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Release\ilc\intermediate\PreMergeILTransformed
 UseILOutputPrefix=False
 LibPathsCount=4

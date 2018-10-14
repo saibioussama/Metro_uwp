@@ -1,4 +1,10 @@
 App.xbf
 HomePage.xbf
 MainPage.xbf
+MapPage.xbf
 SettingsPage.xbf
+SettingsViews\AboutPage.xbf
+SettingsViews\ContactPage.xbf
+SettingsViews\UpdatePage.xbf
+StationsPage.xbf
+TimesPage.xbf

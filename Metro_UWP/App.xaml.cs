@@ -1,4 +1,5 @@
 ﻿using Metro_UWP.Repos;
+using Microsoft.WindowsAzure.Messaging;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +12,9 @@ using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
+using Windows.Networking.PushNotifications;
 using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -38,6 +41,30 @@ namespace Metro_UWP
             this.Suspending += OnSuspending;
         }
 
+
+        private async void InitNotificationsAsync()
+        {
+            try
+            {
+                var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+
+                var hub = new NotificationHub("MetroNotification", "Endpoint=sb://metropushnotification.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=5M/biNiKbSe5oZai5EdMZQO/tJPYWSsXRRJSjKU4v94=");
+                var result = await hub.RegisterNativeAsync(channel.Uri);
+
+                // Displays the registration ID so you know it was successful
+                if (result.RegistrationId != null)
+                {
+                    //var dialog = new MessageDialog("Registration successful: " + result.RegistrationId);
+                    //dialog.Commands.Add(new UICommand("OK"));
+                    //await dialog.ShowAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -45,6 +72,7 @@ namespace Metro_UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            InitNotificationsAsync();
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,

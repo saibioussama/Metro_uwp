@@ -39,10 +39,15 @@ namespace Metro_UWP.SettingsViews
             {
                 LastChangeAtTextBlock.Text = Windows.Storage.ApplicationData.Current.RoamingSettings.Values[StorageRepos.LastUpdateAt].ToString();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 
             }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
         }
 
         private async void GetLastChangesBtn_Click(object sender, RoutedEventArgs e)
@@ -56,7 +61,7 @@ namespace Metro_UWP.SettingsViews
                 StateTextBlock.Text = "Up to date ";
                 StateTextBlock.Foreground = new SolidColorBrush(Colors.DarkCyan);
             }
-            catch(Exception ex)
+            catch(Exception )
             {
                 StateTextBlock.Text = "failed to get update !";
                 StateTextBlock.Foreground = new SolidColorBrush(Colors.Salmon);

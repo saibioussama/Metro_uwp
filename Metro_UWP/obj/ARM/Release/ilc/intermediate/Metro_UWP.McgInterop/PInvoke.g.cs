@@ -400,24 +400,6 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'oleaut32.dll'
-	/// </summary>
-	public unsafe static partial class oleaut32_dll
-	{
-		// Signature, SysFreeString, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.StackTraceGenerator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.LightweightInterop.MarshalExtensions", "SysFreeString")]
-		public static void SysFreeString(global::System.IntPtr bstr)
-		{
-			// Marshalling
-			// Call to native method
-			global::__Interop.oleaut32_dll_PInvokes.SysFreeString(bstr);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			// Return
-		}
-	}
-
-	/// <summary>
 	/// P/Invoke class for module 'ntdll.dll'
 	/// </summary>
 	public unsafe static partial class ntdll_dll
@@ -534,6 +516,24 @@ namespace __Interop
 				if (unsafe_addressString != null)
 					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_addressString);
 			}
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'oleaut32.dll'
+	/// </summary>
+	public unsafe static partial class oleaut32_dll
+	{
+		// Signature, SysFreeString, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.StackTraceGenerator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.LightweightInterop.MarshalExtensions", "SysFreeString")]
+		public static void SysFreeString(global::System.IntPtr bstr)
+		{
+			// Marshalling
+			// Call to native method
+			global::__Interop.oleaut32_dll_PInvokes.SysFreeString(bstr);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
 		}
 	}
 
@@ -681,13 +681,6 @@ namespace __Interop
 					global::System.IntPtr* ppv);
 	}
 
-	public unsafe static partial class oleaut32_dll_PInvokes
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("oleaut32.dll", EntryPoint="#6", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static void SysFreeString(global::System.IntPtr bstr);
-	}
-
 	public unsafe static partial class ntdll_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
@@ -706,6 +699,13 @@ namespace __Interop
 					ushort port, 
 					ushort* addressString, 
 					uint* addressStringLength);
+	}
+
+	public unsafe static partial class oleaut32_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("oleaut32.dll", EntryPoint="#6", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static void SysFreeString(global::System.IntPtr bstr);
 	}
 
 	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,14 +27,14 @@ namespace Metro_UWP
         public SettingsPage()
         {
             this.InitializeComponent();
-            NavigationCacheMode = NavigationCacheMode.Required;
         }
 
         private void SettingsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch(SettingsListBox.SelectedIndex)
+            switch (SettingsListBox.SelectedIndex)
             {
-                case 0: Frame.Navigate(typeof(UpdatePage));
+                case 0:
+                    Frame.Navigate(typeof(UpdatePage));
                     break;
                 case 1:
                     Frame.Navigate(typeof(AboutPage));
@@ -41,7 +42,7 @@ namespace Metro_UWP
                 case 2:
                     Frame.Navigate(typeof(ContactPage));
                     break;
-                default :break;
+                default: break;
 
             }
         }

@@ -114,12 +114,12 @@
                     <TextBlock FontFamily="Segoe MDL2 Assets"
                                Text=""
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               />
+                               VerticalAlignment="Center"/>
 
                     <TextBlock Foreground="Gray"
                                HorizontalAlignment="Center"
                                Text="remaining time"
+                               VerticalAlignment="Center"
                                Margin="5"/>     
                 </StackPanel>
                 <TextBlock x:ConnectionId='4' HorizontalAlignment="Center"
@@ -141,12 +141,11 @@
                       ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}">
                 <GridView.ItemTemplate>
                     <DataTemplate >
-                        <StackPanel Padding="5"
-                                    Margin="5"
+                        <StackPanel Padding="10"
+                                    Margin="-1"
                                     Width="200"
                                     HorizontalAlignment="Stretch"
-                                    Background="WhiteSmoke"
-                                    BorderThickness="1"
+                                    BorderThickness="0,1,0,1"
                                     BorderBrush="#eee">
                             <TextBlock HorizontalAlignment="Center" 
                                        Text="{Binding  Converter={StaticResource DateToStringFormatConverter}}"

@@ -359,16 +359,15 @@
     <Language Code="zu-za" InMinimumRequirementSet="true" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>32840OussamaSAIBI.514110F1AB3D</MainPackageIdentityName>
+    <MainPackageIdentityName>32840OussamaSAIBI.22666CC98E63F</MainPackageIdentityName>
     <ReservedNames>
-      <ReservedName>Metro_Sahel</ReservedName>
+      <ReservedName>Metro SAHEL</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
-    <MainPackageIdentityName>32840OussamaSAIBI.22666CC98E63F</MainPackageIdentityName>
-    <MainPackageIdentityName>32840OussamaSAIBI.metro96</MainPackageIdentityName>
     <MainPackageIdentityName>32840OussamaSAIBI.18640986BB2CE</MainPackageIdentityName>
+    <MainPackageIdentityName>32840OussamaSAIBI.NewTestingApp</MainPackageIdentityName>
     <MainPackageIdentityName>32840OussamaSAIBI.NightSelfie</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NDDXKF2QS5T" />
+  <PackageInfoList LandingUrl="https://developer.microsoft.com/dashboard/Application?appId=9NBLGGH4TL70" />
 </StoreAssociation>

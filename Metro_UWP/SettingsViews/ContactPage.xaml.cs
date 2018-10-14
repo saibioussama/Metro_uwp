@@ -23,17 +23,24 @@ namespace Metro_UWP.SettingsViews
     /// </summary>
     public sealed partial class ContactPage : Page
     {
-        List<Tuple<string, string>> DevelopedBy;
+        List<Tuple<string, string, string, string>> DevelopedBy;
         public ContactPage()
         {
             this.InitializeComponent();
-            DevelopedBy = new List<Tuple<string, string>>()
+            NavigationCacheMode = NavigationCacheMode.Required;
+
+            DevelopedBy = new List<Tuple<string, string, string, string>>()
             {
-                new Tuple<string, string>("Oussama SAIBI", "saibioussama@outlook.fr"),
-                new Tuple<string, string>("Majdi SAIBI", "saibimajdi@outlook.fr"),
-                new Tuple<string, string>("Mejdi RADHOUANI", "--"),
-                new Tuple<string, string>("Emina DRIRA", "--"),
+                new Tuple<string, string,string,string>("Oussama SAIBI", "saibioussama@outlook.fr","https://www.facebook.com/saibioussama"," - - "),
+                new Tuple<string, string,string,string>("Majdi SAIBI", "saibimajdi@outlook.fr","https://www.facebook.com/saibimajdi"," - - "),
+                //new Tuple<string, string>("Mejdi RADHOUANI", "--"),
+                //new Tuple<string, string>("Emina DRIRA", "--"),
             };
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

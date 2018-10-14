@@ -60,14 +60,14 @@ namespace Metro_UWP
                 UpdateInformation();
                 MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
             }
             timer.Start();
         }
 
-        private async void MainPage_OnSearchBoxTextChanged(string QueryText)
+        private void MainPage_OnSearchBoxTextChanged(string QueryText)
         {
             if (QueryText.Length > 0)
             {
