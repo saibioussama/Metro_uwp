@@ -63,6 +63,6 @@
 /Lib:"C:\Program Files (x86)\Windows Kits\10\References\10.0.17134.0\Windows.UI.Xaml.Hosting.HostingContract\2.0.0.0"
 /Lib:"C:\Program Files (x86)\Windows Kits\10\References\10.0.17134.0\Windows.Web.Http.Diagnostics.HttpDiagnosticsContract\2.0.0.0"
 /WinMD:"C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Release\ilc\in\WinMetadata\Windows.winmd"
-/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"5cd54f79-84be-4dfd-a044-ccc3d67fa30f","Id":"872b2bc3-ded9-4584-a481-cb44ee520d5a","ProcessStartTime":636751285333835445}"
+/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"5cd54f79-84be-4dfd-a044-ccc3d67fa30f","Id":"bf8936ca-e9d4-4bb8-b468-d36eed7114d1","ProcessStartTime":636751432159360071}"
 /RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\1.7.3\tools\LibraryXML"
 /RunOnlyPreDR

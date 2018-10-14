@@ -42,7 +42,7 @@ namespace Metro_UWP
             };
         }
 
-        
+
         //private void MyNavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         //{
         //    var item = args.SelectedItem as NavigationViewItem;
@@ -98,11 +98,10 @@ namespace Metro_UWP
         {
             try
             {
-                //await StorageRepos.ClearData();
                 await StorageRepos.GetData();
                 myFrame1.Navigate(typeof(HomePage));
             }
-            catch (Exception ) { }
+            catch (Exception) { }
         }
 
         private void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)

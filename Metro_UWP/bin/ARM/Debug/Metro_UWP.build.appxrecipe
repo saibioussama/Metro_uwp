@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
     <PackageArchitecture>arm</PackageArchitecture>
-    <PackageIdentityName>aa12bd69-db56-4448-81c7-89b172bfe5fe</PackageIdentityName>
+    <PackageIdentityName>d8e4f88e-39e0-466f-8fa4-137a43c79f75</PackageIdentityName>
     <PackageIdentityPublisher>CN=82A12399-115A-43F2-A31B-62B693A405B7</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>

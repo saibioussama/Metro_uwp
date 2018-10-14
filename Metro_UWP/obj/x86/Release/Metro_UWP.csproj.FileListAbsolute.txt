@@ -535,3 +535,4 @@ C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Release\ilc
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.dll.ILTransformTask.repro
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Release\ilc\intermediate\TransformedSRWR\System.Runtime.WindowsRuntime.pdb
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\x86\Release\Metro_UWP.csprojAssemblyReference.cache

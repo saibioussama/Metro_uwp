@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Metro_UWP.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -17,8 +19,6 @@ namespace Metro_UWP.Repos
         public static readonly string stations_sm = nameof(stations_sm);
         public static readonly string LastUpdateAt = nameof(LastUpdateAt);
 
-        public static bool IsDataExist() => false;
-
         public static async Task GetData()
         {
 
@@ -28,7 +28,7 @@ namespace Metro_UWP.Repos
             var stations_ms_json = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/stations_ms.json");
             var stations_sm_json = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/stations_sm.json");
 
-            Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 
             StorageFile sampleFile_times_ms = await localFolder.CreateFileAsync(StorageRepos.times_ms,
                 CreationCollisionOption.ReplaceExisting);
