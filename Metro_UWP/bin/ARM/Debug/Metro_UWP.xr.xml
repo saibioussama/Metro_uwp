@@ -6,6 +6,8 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="NameAR" />
     <RootPropertyPathName Name="NameFR" />
+    <RootPropertyPathName Name="Item2" />
+    <RootPropertyPathName Name="Item1" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -108,6 +110,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Items" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetVerticalScrollBarVisibility" />
@@ -140,6 +145,8 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Content" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
@@ -153,6 +160,15 @@
     </RootType>
     <RootType FullName="Metro_UWP.MainPage" />
     <RootType FullName="Metro_UWP.SettingsPage" />
+    <RootType FullName="Metro_UWP.SettingsViews.AboutPage" />
+    <RootType FullName="Metro_UWP.SettingsViews.ContactPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
+      <RootProperty Name="Name" />
+      <RootProperty Name="IsActive" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Metro_UWP.SettingsViews.UpdatePage" />
     <RootType FullName="Metro_UWP.StationsPage" />
     <RootType FullName="Metro_UWP.TimesPage" />
   </Roots.RootTypes>

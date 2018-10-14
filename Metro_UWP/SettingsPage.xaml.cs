@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Metro_UWP.SettingsViews;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,24 @@ namespace Metro_UWP
         public SettingsPage()
         {
             this.InitializeComponent();
+            NavigationCacheMode = NavigationCacheMode.Required;
+        }
+
+        private void SettingsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch(SettingsListBox.SelectedIndex)
+            {
+                case 0: Frame.Navigate(typeof(UpdatePage));
+                    break;
+                case 1:
+                    Frame.Navigate(typeof(AboutPage));
+                    break;
+                case 2:
+                    Frame.Navigate(typeof(ContactPage));
+                    break;
+                default :break;
+
+            }
         }
     }
 }

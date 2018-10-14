@@ -11,6 +11,9 @@ HomePage.xbf
 MainPage.xbf
 Metro_UWP.xr.xml
 SettingsPage.xbf
+SettingsViews\AboutPage.xbf
+SettingsViews\ContactPage.xbf
+SettingsViews\UpdatePage.xbf
 StationsPage.xbf
 TimesPage.xbf
 Properties\Default.rd.xml

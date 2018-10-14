@@ -37,7 +37,7 @@ namespace Metro_UWP
         {
             this.InitializeComponent();
             Times = new List<DateTime?>();
-            //NavigationCacheMode = NavigationCacheMode.Required;
+            NavigationCacheMode = NavigationCacheMode.Required;
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)

@@ -99,7 +99,9 @@ namespace Metro_UWP
         {
             try
             {
+                //await StorageRepos.ClearData();
                 await StorageRepos.GetData();
+                myFrame1.Navigate(typeof(HomePage));
             }
             catch (Exception ex) { }
         }

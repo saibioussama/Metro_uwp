@@ -8,10 +8,52 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Padding="10"
-          Margin="5"
-          Background="White">
-        <TextBlock>Setting </TextBlock>
-        
+    <Grid Margin="5"
+          Background="White"
+          BorderBrush="#eee"
+          BorderThickness="1">
+        <ListBox Background="White"
+                 Name="SettingsListBox"
+                 SelectionChanged="SettingsListBox_SelectionChanged">
+            <ListBoxItem >
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe MDL2 Assets"
+                               Text="" 
+                               FontSize="18"
+                               VerticalAlignment="Center"
+                               Margin="0,0,20,0"/>
+                    <TextBlock Text="Search for update"
+                               FontWeight="Light"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe MDL2 Assets"
+                               Text="" 
+                               FontSize="18"
+                               VerticalAlignment="Center"
+                               Margin="0,0,20,0"/>
+                    <TextBlock Text="About"
+                               FontWeight="Light"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe MDL2 Assets"
+                               Text="" 
+                               FontSize="18"
+                               VerticalAlignment="Center"
+                               Margin="0,0,20,0"/>
+                    <TextBlock Text="Contact"
+                               FontWeight="Light"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+            </ListBoxItem>
+
+        </ListBox>
     </Grid>
 </Page>

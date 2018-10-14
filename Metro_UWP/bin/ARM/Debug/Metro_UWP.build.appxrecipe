@@ -430,6 +430,15 @@
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\SettingsViews\AboutPage.xbf">
+      <PackagePath>SettingsViews\AboutPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\SettingsViews\ContactPage.xbf">
+      <PackagePath>SettingsViews\ContactPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\SettingsViews\UpdatePage.xbf">
+      <PackagePath>SettingsViews\UpdatePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\StationsPage.xbf">
       <PackagePath>StationsPage.xbf</PackagePath>
     </AppxPackagedFile>

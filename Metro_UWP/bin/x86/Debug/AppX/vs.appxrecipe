@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-08T20:40:13.503</Modified>
+      <Modified>2018-10-14T10:55:38.831</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Metro_UWP.exe">
       <PackagePath>entrypoint\Metro_UWP.exe</PackagePath>
-      <Modified>2018-10-08T20:40:13.092</Modified>
+      <Modified>2018-10-14T10:55:38.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -559,7 +559,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Metro_UWP.xr.xml">
       <PackagePath>Metro_UWP.xr.xml</PackagePath>
-      <Modified>2018-10-08T20:33:32.378</Modified>
+      <Modified>2018-10-14T10:46:22.447</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
@@ -575,7 +575,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\SettingsPage.xbf">
       <PackagePath>SettingsPage.xbf</PackagePath>
-      <Modified>2018-10-08T20:15:52.860</Modified>
+      <Modified>2018-10-14T09:34:37.247</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\SettingsViews\AboutPage.xbf">
+      <PackagePath>SettingsViews\AboutPage.xbf</PackagePath>
+      <Modified>2018-10-14T09:49:02.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\SettingsViews\ContactPage.xbf">
+      <PackagePath>SettingsViews\ContactPage.xbf</PackagePath>
+      <Modified>2018-10-14T10:33:36.822</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\SettingsViews\UpdatePage.xbf">
+      <PackagePath>SettingsViews\UpdatePage.xbf</PackagePath>
+      <Modified>2018-10-14T10:54:24.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\StationsPage.xbf">
       <PackagePath>StationsPage.xbf</PackagePath>
@@ -583,7 +595,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\TimesPage.xbf">
       <PackagePath>TimesPage.xbf</PackagePath>
-      <Modified>2018-10-08T20:40:12.795</Modified>
+      <Modified>2018-10-13T14:25:33.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -592,11 +604,11 @@
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-10-08T20:15:55.840</Modified>
+      <Modified>2018-10-14T09:29:16.105</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\x86\Debug\Core\Metro_UWP.exe">
       <PackagePath>Metro_UWP.exe</PackagePath>
-      <Modified>2018-10-08T20:40:13.499</Modified>
+      <Modified>2018-10-14T10:55:38.828</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
