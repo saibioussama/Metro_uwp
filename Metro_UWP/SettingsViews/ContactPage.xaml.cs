@@ -31,7 +31,7 @@ namespace Metro_UWP.SettingsViews
 
             DevelopedBy = new List<Tuple<string, string, string, string>>()
             {
-                new Tuple<string, string,string,string>("Oussama SAIBI", "saibioussama@outlook.fr","https://www.facebook.com/saibioussama"," - - "),
+                new Tuple<string, string,string,string>("Oussama SAIBI", "saibioussama@outlook.fr","https://www.facebook.com/saibioussama","+216 52304328"),
                 new Tuple<string, string,string,string>("Majdi SAIBI", "saibimajdi@outlook.fr","https://www.facebook.com/saibimajdi"," - - "),
                 //new Tuple<string, string>("Mejdi RADHOUANI", "--"),
                 //new Tuple<string, string>("Emina DRIRA", "--"),

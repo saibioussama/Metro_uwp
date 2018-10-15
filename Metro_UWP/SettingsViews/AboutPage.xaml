@@ -61,8 +61,8 @@
                 <ListBoxItem>
                     <StackPanel>
                         <TextBlock Text="Official web-site : " 
-                           Margin="5"/>
-                        <HyperlinkButton Margin="5"
+                           Margin="5,0,5,0"/>
+                        <HyperlinkButton Margin="5,0,5,0"
                            FontWeight="Light" NavigateUri="http://metrosahel.azurewebsites.net">
                             http://metrosahel.azurewebsites.net
                         </HyperlinkButton>

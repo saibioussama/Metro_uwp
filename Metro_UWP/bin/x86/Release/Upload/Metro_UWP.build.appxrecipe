@@ -385,35 +385,103 @@
     <AppxPackagedFile Include="C:\Users\saibi\.nuget\packages\windowsazure.messaging.managed\0.1.7.9\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll">
       <PackagePath>Microsoft.WindowsAzure.Messaging.Managed.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Background2.png">
+      <PackagePath>Assets\Background2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\HeaderHome.png">
+      <PackagePath>Assets\HeaderHome.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\locIcon.png">
       <PackagePath>Assets\locIcon.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\logo.png">
+      <PackagePath>Assets\logo.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square310x310Logo.scale-200.png">
+      <PackagePath>Assets\Square310x310Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square310x310Logo.scale-400.png">
+      <PackagePath>Assets\Square310x310Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square71x71Logo.scale-125.png">
+      <PackagePath>Assets\Square71x71Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square71x71Logo.scale-150.png">
+      <PackagePath>Assets\Square71x71Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StationTemplateBackground.png">
+      <PackagePath>Assets\StationTemplateBackground.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\Assets\Metro_Sahel01.JPG">
+      <PackagePath>Assets\Metro_Sahel01.JPG</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\NotificationsTemplate.xml">
       <PackagePath>NotificationsTemplate.xml</PackagePath>

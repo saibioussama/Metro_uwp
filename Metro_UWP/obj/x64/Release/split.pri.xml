@@ -2,9 +2,7 @@
 <PriInfo>
 	<ResourceMap name="32840OussamaSAIBI.22666CC98E63F" version="1.0" primary="true">
 		<Qualifiers>
-			<AlternateForm>UNPLATED</AlternateForm>
 			<Scale>200</Scale>
-			<TargetSize>24</TargetSize>
 		</Qualifiers>
 		<ResourceMapSubtree name="Files">
 			<NamedResource name="App.xbf" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/App.xbf">
@@ -53,6 +51,16 @@
 				</Candidate>
 			</NamedResource>
 			<ResourceMapSubtree name="Assets">
+				<NamedResource name="Background2.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Background2.png">
+					<Candidate type="Path">
+						<Value>Assets\Background2.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="HeaderHome.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/HeaderHome.png">
+					<Candidate type="Path">
+						<Value>Assets\HeaderHome.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="locIcon.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/locIcon.png">
 					<Candidate type="Path">
 						<Value>Assets\locIcon.png</Value>
@@ -61,6 +69,16 @@
 				<NamedResource name="LockScreenLogo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/LockScreenLogo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="logo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/logo.png">
+					<Candidate type="Path">
+						<Value>Assets\logo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Metro_Sahel01.JPG" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Metro_Sahel01.JPG">
+					<Candidate type="Path">
+						<Value>Assets\Metro_Sahel01.JPG</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="SplashScreen.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/SplashScreen.png">
@@ -73,17 +91,29 @@
 						<Value>Assets\Square150x150Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Square44x44Logo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Square44x44Logo.png">
-					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
-						<Value>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+				<NamedResource name="Square310x310Logo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Square310x310Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square310x310Logo.scale-200.png</Value>
 					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Square44x44Logo.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\Square44x44Logo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="StoreLogo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/StoreLogo.png">
+				<NamedResource name="Square71x71Logo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Square71x71Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square71x71Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StationTemplateBackground.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/StationTemplateBackground.png">
 					<Candidate type="Path">
-						<Value>Assets\StoreLogo.png</Value>
+						<Value>Assets\StationTemplateBackground.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://32840OussamaSAIBI.22666CC98E63F/Files/Assets/Wide310x150Logo.png">

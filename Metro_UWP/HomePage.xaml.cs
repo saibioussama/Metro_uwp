@@ -49,6 +49,8 @@ namespace Metro_UWP
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            MiddleArea.Opacity = 0;
+            MyProgressRing.IsActive = true;
             try
             {
                 stations_sm = await StationsRepo.GetStations(Models.Station.Directions.SM);
@@ -65,6 +67,8 @@ namespace Metro_UWP
 
             }
             timer.Start();
+            MiddleArea.Opacity = 1;
+            MyProgressRing.IsActive = false;
         }
 
         private void MainPage_OnSearchBoxTextChanged(string QueryText)

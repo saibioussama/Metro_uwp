@@ -29,9 +29,8 @@
         </Grid>
 
         <ListView Name="DevelopedByListView"
-                 Grid.Row="1"
-                  SelectionMode="None"
-                 Background="White">
+                  Grid.Row="1"
+                  Background="White">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="0,10,0,10">

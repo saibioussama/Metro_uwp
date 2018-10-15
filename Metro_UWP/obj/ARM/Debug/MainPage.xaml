@@ -51,7 +51,7 @@
                    DisplayMode="Overlay">
             <SplitView.Pane>
                 <Grid>
-                    <ListBox x:ConnectionId='3' Name="MyListBox" 
+                    <ListBox x:ConnectionId='3' Name="MyListBox"
                              ScrollViewer.VerticalScrollBarVisibility="Auto"
                              ScrollViewer.VerticalScrollMode="Auto">
                         <ListBoxItem x:ConnectionId='5'                          
@@ -86,13 +86,12 @@
                             </StackPanel>
                         </ListBoxItem>
                     </ListBox>
-                    <ListView Margin="-10,0,0,0"
-                              BorderBrush="LightGray"
+                    <ListView BorderBrush="LightGray"
                               BorderThickness="0,1,0,0" 
                               VerticalAlignment="Bottom"
                               HorizontalAlignment="Stretch"
                               SelectionMode="None" >
-                        <ListBoxItem x:ConnectionId='4'                            >
+                        <ListViewItem x:ConnectionId='4'                           >
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="" 
                                            FontFamily="Segoe MDL2 Assets" 
@@ -101,7 +100,7 @@
                                            Margin="30,0,0,0"
                                            VerticalAlignment="Center"/>
                             </StackPanel>
-                        </ListBoxItem>
+                        </ListViewItem>
                     </ListView>
                 </Grid>
             </SplitView.Pane>

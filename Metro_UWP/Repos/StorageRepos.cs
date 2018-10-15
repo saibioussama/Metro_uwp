@@ -46,7 +46,7 @@ namespace Metro_UWP.Repos
                 CreationCollisionOption.ReplaceExisting);
             await FileIO.WriteTextAsync(sampleFile_stations_sm, stations_sm_json);
 
-            ApplicationData.Current.RoamingSettings.Values[StorageRepos.LastUpdateAt] = DateTime.Now.ToString();
+            ApplicationData.Current.RoamingSettings.Values[StorageRepos.LastUpdateAt] = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm:ss");
         }
 
         public static async Task ClearData()

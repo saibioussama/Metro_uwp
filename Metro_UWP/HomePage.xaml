@@ -10,19 +10,22 @@
     xmlns:conv="using:Metro_UWP.Models" 
     Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-  
+
     <Page.Resources>
         <conv:Helper x:Name="DateToStringFormatConverter"/>
         <ItemsPanelTemplate x:Key="ItemsPanelTemplate">
             <ItemsStackPanel />
         </ItemsPanelTemplate>
     </Page.Resources>
+
     <Grid>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
+
         <Grid Margin="5" 
               Background="White"
               BorderBrush="#eee"
@@ -101,6 +104,7 @@
               Grid.Row="1"
               BorderBrush="#eee"
               BorderThickness="1"
+                    Name="MiddleArea"
               Background="White">
             <StackPanel HorizontalAlignment="Stretch"
                         Background="#eee"
@@ -120,7 +124,7 @@
                                HorizontalAlignment="Center"
                                Text="remaining time"
                                VerticalAlignment="Center"
-                               Margin="5"/>     
+                               Margin="5"/>
                 </StackPanel>
                 <TextBlock HorizontalAlignment="Center"
                            Name="RemainingTimeTB"
@@ -129,7 +133,15 @@
                            FontWeight="Light"/>
             </StackPanel>
         </StackPanel>
-
+        
+        <ProgressRing HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Name="MyProgressRing"
+                      Grid.Row="1" 
+                      Height="50"
+                      Width="50"
+                      IsActive="False"/>
+        
         <Grid Padding="10" 
               Margin="5"
               Grid.Row="2"
@@ -156,5 +168,6 @@
                 </GridView.ItemTemplate>
             </GridView>
         </Grid>
+
     </Grid>
 </Page>
