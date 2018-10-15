@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Margin="5"
@@ -15,45 +16,20 @@
         <ListBox Background="White"
                  Name="SettingsListBox"
                  SelectionChanged="SettingsListBox_SelectionChanged">
-            <ListBoxItem >
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontFamily="Segoe MDL2 Assets"
-                            Text="" 
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="local:SettingsItem">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontFamily="Segoe MDL2 Assets"
+                            Text="{x:Bind Icon}" 
                             FontSize="18"
                             VerticalAlignment="Center"
                             Margin="0,0,20,0"/>
-                    <TextBlock Text="Search for update"
+                        <TextBlock Text="{Binding DisplayName}"
                             FontWeight="Light"
                             VerticalAlignment="Center"/>
-                </StackPanel>
-            </ListBoxItem>
-
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontFamily="Segoe MDL2 Assets"
-                               Text="" 
-                               FontSize="18"
-                               VerticalAlignment="Center"
-                               Margin="0,0,20,0"/>
-                    <TextBlock Text="About"
-                               FontWeight="Light"
-                               VerticalAlignment="Center"/>
-                </StackPanel>
-            </ListBoxItem>
-
-            <ListBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock FontFamily="Segoe MDL2 Assets"
-                               Text="" 
-                               FontSize="18"
-                               VerticalAlignment="Center"
-                               Margin="0,0,20,0"/>
-                    <TextBlock Text="Contact"
-                               FontWeight="Light"
-                               VerticalAlignment="Center"/>
-                </StackPanel>
-            </ListBoxItem>
-
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
     </Grid>
 </Page>

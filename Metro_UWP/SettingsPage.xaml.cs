@@ -19,32 +19,60 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Metro_UWP
 {
+
+    public class SettingsItem
+    {
+        public int Id { get; set; }
+        public string DisplayName { get; set; }
+        public string Icon { get; set; }
+        public Type Page { get; set; }
+    }
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
+        List<SettingsItem> Items;
+
         public SettingsPage()
         {
             this.InitializeComponent();
+            Items = new List<SettingsItem>()
+            {
+                new SettingsItem()
+                {
+                    Id = 1,
+                    DisplayName = "Search for update",
+                    Icon = "",
+                    Page = typeof(UpdatePage),
+                },
+                new SettingsItem()
+                {
+                    Id= 2,
+                    DisplayName = "About",
+                    Icon = "",
+                    Page = typeof(AboutPage)
+                },
+                new SettingsItem()
+                {
+                    Id = 3,
+                    DisplayName = "Contact",
+                    Icon = "",
+                    Page = typeof(ContactPage)
+                }
+            };
         }
 
         private void SettingsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            switch (SettingsListBox.SelectedIndex)
-            {
-                case 0:
-                    Frame.Navigate(typeof(UpdatePage));
-                    break;
-                case 1:
-                    Frame.Navigate(typeof(AboutPage));
-                    break;
-                case 2:
-                    Frame.Navigate(typeof(ContactPage));
-                    break;
-                default: break;
+            var item = Items[SettingsListBox.SelectedIndex];
+            Frame.Navigate(item.Page);
+        }
 
-            }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            SettingsListBox.ItemsSource = Items;
         }
     }
 }
