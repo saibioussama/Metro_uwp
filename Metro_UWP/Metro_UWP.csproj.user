@@ -3,6 +3,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <BackgroundTaskDebugEngines>{3B476D35-A401-11D2-AAD4-00C04F990171}</BackgroundTaskDebugEngines>
   </PropertyGroup>
   <PropertyGroup>
     <AppxPackageIsForStore>True</AppxPackageIsForStore>

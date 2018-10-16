@@ -174,8 +174,6 @@
     <Content Include="NotificationsTemplate.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Metro_UWP_StoreKey.pfx" />
-    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>

@@ -25,7 +25,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Padding="10">
-            <GridView Name="MyListView_sm"      
+            <GridView Name="MyListView_sm"  
                       IsItemClickEnabled="True"
                       ItemsPanel="{StaticResource ResourceKey=ItemsPanelTemplate}" ItemClick="MyListView_sm_ItemClick">
 
@@ -56,7 +56,10 @@
                            Name="MyMap">
             </my:MapControl>
 
-            <StackPanel VerticalAlignment="Top"
+            <StackPanel Name="BtnContainer"
+                        RequestedTheme="Light"
+                        VerticalAlignment="Stretch"
+                        Background="{ThemeResource SystemControlBackgroundAltMediumBrush}"
                         HorizontalAlignment="Right">
                 <Button FontFamily="Segoe MDL2 Assets"
                         Content="" 
@@ -70,6 +73,19 @@
                         FontSize="20"
                         Name="ThemeBtn"
                         Click="ThemeBtn_Click"/>
+                <Button FontFamily="Segoe MDL2 Assets"
+                        Margin="5"
+                        Content=""
+                        FontSize="20"
+                        Name="DirectionBtn"
+                        Click="DirectionBtn_Click"/>
+                <Button FontFamily="Segoe MDL2 Assets"
+                        Margin="5"
+                        Content=""
+                        FontSize="20"
+                        Name="ClearMapBtn"
+                        Click="ClearMapBtn_Click"/>
+
             </StackPanel>
 
 

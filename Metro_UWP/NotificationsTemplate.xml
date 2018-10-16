@@ -3,8 +3,8 @@
 	<visual>
 		<binding template="ToastGeneric">
 			<text>Metro SAHEL</text>
-			<text>Working in new update :D</text>
-			<!--<group>
+			<text>Content goes here !</text>
+			<group>
 				<subgroup>
 					<text hint-style="base">52 attendees</text>
 					<text hint-style="captionSubtle">23 minute drive</text>
@@ -13,7 +13,7 @@
 					<text hint-style="captionSubtle" hint-align="right">1 Microsoft Way</text>
 					<text hint-style="captionSubtle" hint-align="right">Bellevue, WA 98008</text>
 				</subgroup>
-			</group>-->
+			</group>
 		</binding>
 	</visual>
 </toast>

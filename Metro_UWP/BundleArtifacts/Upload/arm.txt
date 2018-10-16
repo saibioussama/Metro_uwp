@@ -1,6 +1,6 @@
-MainPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0_ARM.appx
-SymbolPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0\Metro_UWP_1.2.0.0_ARM.appxsym
-ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0_scale-100.appx
-ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0_scale-125.appx
-ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0_scale-150.appx
-ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.0.0_scale-400.appx
+MainPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.1.0_ARM.appx
+SymbolPackage=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.1.0\Metro_UWP_1.2.1.0_ARM.appxsym
+ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.1.0_scale-100.appx
+ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.1.0_scale-125.appx
+ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.1.0_scale-150.appx
+ResourcePack=C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Release\Upload\Metro_UWP_1.2.1.0_scale-400.appx

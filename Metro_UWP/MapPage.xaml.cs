@@ -11,6 +11,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Services.Maps;
 using Windows.Storage.Streams;
+using Windows.UI;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -32,6 +33,8 @@ namespace Metro_UWP
     {
         List<Station> Stations;
         Station station;
+        Geopoint CurrentPosition = null;
+
         public MapPage()
         {
             this.InitializeComponent();
@@ -41,6 +44,7 @@ namespace Metro_UWP
         {
             Stations = await StationsRepo.GetStations(Station.Directions.SM);
             MyListView_sm.ItemsSource = Stations;
+            MyListView_sm.SelectedIndex = 0;
             station = Stations.First();
             MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
             InitMap();
@@ -63,13 +67,12 @@ namespace Metro_UWP
         private async void MyListView_sm_ItemClick(object sender, ItemClickEventArgs e)
         {
             station = e.ClickedItem as Station;
-            MyMap.Center = new Geopoint(
-               new BasicGeoposition()
-               {
-                   Latitude = station.Lat,
-                   Longitude = station.Long
-               }
-         );
+            MyMap.Center = new Geopoint(new BasicGeoposition()
+            {
+                Latitude = station.Lat,
+                Longitude = station.Long
+            });
+
             MapScene mp = MapScene.CreateFromLocationAndRadius(new Geopoint(new BasicGeoposition() { Latitude = station.Lat, Longitude = station.Long }), 800);
             await MyMap.TrySetSceneAsync(mp);
         }
@@ -96,21 +99,22 @@ namespace Metro_UWP
             MyMap.ZoomLevel = 16;
         }
 
-        public void InitMap()
+        private void InitMap()
         {
             foreach (Station x in Stations)
             {
                 SetPoint(x.Lat, x.Long, x.NameAR);
             }
-
         }
 
-        public async Task setCurrentLocation()
+        private async Task GetCurrentLocation()
         {
+            MyProgressRing.IsActive = true;
+            MyMap.Opacity = 0.5;
             try
             {
                 if (MyMap.MapElements.Count > Stations.Count)
-                    MyMap.MapElements.RemoveAt(MyMap.MapElements.Count-1);
+                    MyMap.MapElements.RemoveAt(MyMap.MapElements.Count - 1);
                 var geoLocator = new Geolocator();
                 var position = await geoLocator.GetGeopositionAsync();
                 var mapLocation = await MapLocationFinder.FindLocationsAtAsync(position.Coordinate.Point);
@@ -120,14 +124,14 @@ namespace Metro_UWP
                     basicGeoposition.Latitude = position.Coordinate.Point.Position.Latitude;
                     basicGeoposition.Longitude = position.Coordinate.Point.Position.Longitude;
                     Geopoint point = new Geopoint(basicGeoposition);
+                    CurrentPosition = point;
                     MapIcon mapIcon = new MapIcon()
                     {
                         Location = point,
-                        Title = "My position"
+                        Title = "Me"
                     };
                     MyMap.MapElements.Add(mapIcon);
                     MyMap.Center = point;
-                    mapIcon.Image = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/locIcon.png"));
                     MapScene mp = MapScene.CreateFromLocationAndRadius(new Geopoint(new BasicGeoposition() { Latitude = point.Position.Latitude, Longitude = point.Position.Longitude }), 800);
                     await MyMap.TrySetSceneAsync(mp);
                 }
@@ -137,33 +141,68 @@ namespace Metro_UWP
                 MessageDialog m = new MessageDialog("failed to get your location.\nTurn on your location and try again.");
                 await m.ShowAsync();
             }
+            MyMap.Opacity = 1;
+            MyProgressRing.IsActive = false;
         }
 
         private async void LocationBtn_Click(object sender, RoutedEventArgs e)
         {
-            MyProgressRing.IsActive = true;
-            MyMap.Opacity = 0.5;
-            await setCurrentLocation();
-            MyMap.Opacity = 1;
-            MyProgressRing.IsActive = false;
+            await GetCurrentLocation();
         }
 
         private void ThemeBtn_Click(object sender, RoutedEventArgs e)
         {
             //dark icon
-            if(MyMap.ColorScheme == MapColorScheme.Light)
+            if (MyMap.ColorScheme == MapColorScheme.Light)
             {
                 MyMap.ColorScheme = MapColorScheme.Dark;
-                ThemeBtn.RequestedTheme = ElementTheme.Dark;
-                LocationBtn.RequestedTheme = ElementTheme.Dark;
+                BtnContainer.RequestedTheme = ElementTheme.Dark;
             }
             else
             {
                 MyMap.ColorScheme = MapColorScheme.Light;
-                ThemeBtn.RequestedTheme = ElementTheme.Light;
-                LocationBtn.RequestedTheme = ElementTheme.Light;
+                BtnContainer.RequestedTheme = ElementTheme.Light;
             }
+
             ThemeBtn.Content = ThemeBtn.Content.ToString() == "" ? "" : "";
+        }
+
+        private async void GetDirection(Geopoint startPoint, Geopoint endPoint)
+        {
+            MapRouteFinderResult routeResult = await MapRouteFinder.GetDrivingRouteAsync(startPoint, endPoint, MapRouteOptimization.Time, MapRouteRestrictions.None);
+            if (routeResult.Status == MapRouteFinderStatus.Success)
+            {
+                MapRouteView viewOfRoute = new MapRouteView(routeResult.Route);
+                viewOfRoute.RouteColor = Colors.Salmon;
+                viewOfRoute.OutlineColor = Colors.OrangeRed;
+                MyMap.Routes.Add(viewOfRoute);
+                await MyMap.TrySetViewBoundsAsync(routeResult.Route.BoundingBox, null, MapAnimationKind.Bow);
+            }
+        }
+
+        private async void DirectionBtn_Click(object sender, RoutedEventArgs e)
+        {
+            await GetCurrentLocation();
+            if (CurrentPosition != null)
+            {
+                MyMap.Routes.Clear();
+                GetDirection(CurrentPosition, new Geopoint(new BasicGeoposition()
+                {
+                    Latitude = station.Lat,
+                    Longitude = station.Long
+                }));
+            }
+        }
+
+        private void ClearMapBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyMap.Routes.Clear();
+            MyMap.Center = new Geopoint(new BasicGeoposition()
+            {
+                Latitude = 35.670235,
+                Longitude = 10.882897
+            });
+            MyMap.ZoomLevel = 10;
         }
     }
 }
