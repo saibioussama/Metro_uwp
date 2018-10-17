@@ -23,10 +23,10 @@ namespace Metro_UWP.Repos
         {
 
             HttpClient client = new HttpClient();
-            var times_ms_json = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/times_ms.json");
-            var times_sm_json = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/times_sm.json");
-            var stations_ms_json = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/stations_ms.json");
-            var stations_sm_json = await client.GetStringAsync("http://metroapps.azurewebsites.net/data/stations_sm.json");
+            var stations_sm_json = await client.GetStringAsync("https://metroapps.azurewebsites.net/api/stations/0");
+            var stations_ms_json = await client.GetStringAsync("https://metroapps.azurewebsites.net/api/stations/1");
+            var times_sm_json = await client.GetStringAsync("https://metroapps.azurewebsites.net/api/lines/0");
+            var times_ms_json = await client.GetStringAsync("https://metroapps.azurewebsites.net/api/lines/1");
 
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
 

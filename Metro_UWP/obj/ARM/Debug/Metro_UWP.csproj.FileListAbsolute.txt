@@ -267,3 +267,4 @@ C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\quali
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Microsoft.WindowsAzure.Messaging.Managed.pri.xml
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\ProjectArchitectures.txt
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Metro_UWP.csprojAssemblyReference.cache
