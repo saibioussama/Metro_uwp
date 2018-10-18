@@ -92,6 +92,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
@@ -201,6 +202,7 @@
     </RootType>
     <RootType FullName="Metro_UWP.SettingsViews.AboutPage" />
     <RootType FullName="Metro_UWP.SettingsViews.ContactPage" />
+    <RootType FullName="Metro_UWP.SettingsViews.FavoritesPage" />
     <RootType FullName="Metro_UWP.SettingsViews.UpdatePage" />
     <RootType FullName="Metro_UWP.StationsPage" />
     <RootType FullName="Metro_UWP.TimesPage" />

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -30,10 +31,24 @@ namespace Metro_UWP
         List<DateTime?> AvailableTimesOfStation;
         DispatcherTimer timer;
         List<Station> stations_ms, stations_sm;
+        int Fav_sm = 0;
+        int Fav_ms = 0;
 
         public HomePage()
         {
             this.InitializeComponent();
+
+            try
+            {
+                if (ApplicationData.Current.RoamingSettings.Values[StorageRepos.fav_sm] != null)
+                    Fav_sm = Convert.ToInt16(ApplicationData.Current.RoamingSettings.Values[StorageRepos.fav_sm].ToString());
+                if (ApplicationData.Current.RoamingSettings.Values[StorageRepos.fav_ms] != null)
+                    Fav_ms = Convert.ToInt16(ApplicationData.Current.RoamingSettings.Values[StorageRepos.fav_ms].ToString());
+            }
+            catch
+            {
+
+            }
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
@@ -53,11 +68,13 @@ namespace Metro_UWP
             MyProgressRing.IsActive = true;
             try
             {
-                stations_sm = await StationsRepo.GetStations(Models.Station.Directions.SM);
+                stations_sm = await StationsRepo.GetStations(Station.Directions.SM);
                 MyListView_sm.ItemsSource = stations_sm;
-                stations_ms = await StationsRepo.GetStations(Models.Station.Directions.MS);
+                stations_ms = await StationsRepo.GetStations(Station.Directions.MS);
                 MyListView_ms.ItemsSource = stations_ms;
-                SelectedStation = stations_sm?.First();
+                SelectedStation = stations_sm[Fav_sm];
+                MyListView_sm.SelectedIndex = Fav_sm;
+                MyListView_sm.ScrollIntoView(MyListView_sm.Items[Fav_sm]);
                 AvailableTimesOfStation = await GetAvailableTimesOfStation(MyPivot.SelectedIndex == 0 ? Station.Directions.SM : Station.Directions.MS, SelectedStation.Id);
                 UpdateInformation();
                 MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
@@ -110,25 +127,26 @@ namespace Metro_UWP
         {
             StationName.Text = SelectedStation.NameAR;
             TimesGridView.ItemsSource = AvailableTimesOfStation;
-
         }
 
         private async void MyPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (stations_sm?.Count > 0 && stations_ms?.Count > 0)
             {
-                var item = MyPivot.Items[MyPivot.SelectedIndex];
-
                 switch (MyPivot.SelectedIndex)
                 {
                     case 0:
-                        SelectedStation = stations_sm.First();
                         MyListView_sm.ItemsSource = stations_sm;
+                        MyListView_sm.SelectedIndex = Fav_sm;
+                        SelectedStation = stations_sm[Fav_sm];
+                        MyListView_sm.ScrollIntoView(MyListView_sm.Items[Fav_sm]);
                         AvailableTimesOfStation = await GetAvailableTimesOfStation(Station.Directions.SM, SelectedStation.Id);
                         break;
                     case 1:
-                        SelectedStation = stations_ms.First();
                         MyListView_ms.ItemsSource = stations_ms;
+                        MyListView_ms.SelectedIndex = Fav_ms;
+                        SelectedStation = stations_ms[Fav_ms];
+                        MyListView_ms.ScrollIntoView(MyListView_ms.Items[Fav_ms]);
                         AvailableTimesOfStation = await GetAvailableTimesOfStation(Station.Directions.MS, SelectedStation.Id);
                         break;
                     default: break;

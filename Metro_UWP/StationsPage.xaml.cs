@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -28,6 +29,8 @@ namespace Metro_UWP
     {
         Station SelectedStation;
         List<Station> stations_ms, stations_sm;
+        
+
         public StationsPage()
         {
             this.InitializeComponent();
@@ -35,7 +38,6 @@ namespace Metro_UWP
 
         private void MyPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void MyListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -52,7 +54,6 @@ namespace Metro_UWP
                 MyListView_sm.ItemsSource = stations_sm;
                 stations_ms = await StationsRepo.GetStations(Models.Station.Directions.MS);
                 MyListView_ms.ItemsSource = stations_ms;
-                SelectedStation = stations_sm?.First();
                 MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
             }
             catch (Exception )

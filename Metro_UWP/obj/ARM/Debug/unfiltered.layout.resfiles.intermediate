@@ -35,6 +35,7 @@ Metro_UWP.xr.xml
 SettingsPage.xbf
 SettingsViews\AboutPage.xbf
 SettingsViews\ContactPage.xbf
+SettingsViews\FavoritesPage.xbf
 SettingsViews\UpdatePage.xbf
 StationsPage.xbf
 TimesPage.xbf

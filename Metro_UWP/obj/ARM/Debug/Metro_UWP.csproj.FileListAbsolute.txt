@@ -268,3 +268,8 @@ C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Multi
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Microsoft.WindowsAzure.Messaging.Managed.pri.xml
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\ProjectArchitectures.txt
 C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\Metro_UWP.csprojAssemblyReference.cache
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\bin\ARM\Debug\SettingsViews\FavoritesPage.xbf
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\FavoritesPage.g.i.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\FavoritesPage.g.cs
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\FavoritesPage.xaml
+C:\Users\saibi\OneDrive\Documents\GitHub\Metro_uwp\Metro_UWP\obj\ARM\Debug\SettingsViews\FavoritesPage.xbf

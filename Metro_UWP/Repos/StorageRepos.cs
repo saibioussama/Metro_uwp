@@ -18,6 +18,8 @@ namespace Metro_UWP.Repos
         public static readonly string stations_ms = nameof(stations_ms);
         public static readonly string stations_sm = nameof(stations_sm);
         public static readonly string LastUpdateAt = nameof(LastUpdateAt);
+        public static readonly string fav_sm = nameof(fav_sm);
+        public static readonly string fav_ms = nameof(fav_ms);
 
         public static async Task GetData()
         {

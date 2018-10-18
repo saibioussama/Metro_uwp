@@ -50,13 +50,20 @@ namespace Metro_UWP
                 new SettingsItem()
                 {
                     Id= 2,
+                    DisplayName = "Defaults stations",
+                    Icon = "",
+                    Page = typeof(FavoritesPage)
+                },
+                new SettingsItem()
+                {
+                    Id= 3,
                     DisplayName = "About",
                     Icon = "",
                     Page = typeof(AboutPage)
                 },
                 new SettingsItem()
                 {
-                    Id = 3,
+                    Id = 4,
                     DisplayName = "Contact",
                     Icon = "",
                     Page = typeof(ContactPage)
