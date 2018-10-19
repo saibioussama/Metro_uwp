@@ -8,6 +8,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Core;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -47,6 +48,11 @@ namespace Metro_UWP.SettingsViews
         {
             try
             {
+                MyListView_ms.SelectedIndex = Fav_ms;
+                MyListView_ms.ScrollIntoView(MyListView_ms.Items[Fav_ms]);
+                MyListView_sm.SelectedIndex = Fav_sm;
+                MyListView_sm.ScrollIntoView(MyListView_sm.Items[Fav_sm]);
+
                 if (MyPivot.SelectedIndex == 0)
                 {
                     StationName.Text = stations_sm[Fav_sm].NameAR;
@@ -81,8 +87,15 @@ namespace Metro_UWP.SettingsViews
                     message = "something went wrong !";
                     break;
             }
-            //MessageDialog messageDialog = new MessageDialog(message);
-            //await messageDialog.ShowAsync();
+
+            try
+            {
+                Fav_sm = Convert.ToInt16(ApplicationData.Current.RoamingSettings.Values[StorageRepos.fav_sm].ToString());
+                Fav_ms = Convert.ToInt16(ApplicationData.Current.RoamingSettings.Values[StorageRepos.fav_ms].ToString());
+            }
+            catch
+            {
+            }
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -134,6 +147,25 @@ namespace Metro_UWP.SettingsViews
             {
                 MyListView_sm.ItemsSource = stations_sm;
                 MyListView_ms.ItemsSource = stations_ms;
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
+        }
+
+        public event EventHandler<BackRequestedEventArgs> OnBackRequested;
+        private void App_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            OnBackRequested?.Invoke(this, e);
+            if (!e.Handled)
+            {
+                if (Frame.CanGoBack)
+                {
+                    Frame.GoBack();
+                    e.Handled = true;
+                }
             }
         }
     }

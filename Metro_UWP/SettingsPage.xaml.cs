@@ -51,7 +51,7 @@ namespace Metro_UWP
                 {
                     Id= 2,
                     DisplayName = "Defaults stations",
-                    Icon = "",
+                    Icon = "",
                     Page = typeof(FavoritesPage)
                 },
                 new SettingsItem()

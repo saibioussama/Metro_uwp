@@ -112,9 +112,9 @@ namespace Metro_UWP
                 var statusBar = StatusBar.GetForCurrentView();
                 if (statusBar != null)
                 {
-                    await statusBar.ShowAsync();
                     statusBar.ForegroundColor = Colors.Black;
                     statusBar.BackgroundColor = Colors.WhiteSmoke;
+                    await statusBar.ShowAsync();
                 }
             }
 

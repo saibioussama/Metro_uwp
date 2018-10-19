@@ -54,12 +54,26 @@ namespace Metro_UWP
             timer.Tick += Timer_Tick;
         }
 
-        private void Timer_Tick(object sender, object e)
+        private async void Timer_Tick(object sender, object e)
         {
-            if (AvailableTimesOfStation != null && AvailableTimesOfStation.Count > 0)
-                RemainingTimeTB.Text = (AvailableTimesOfStation.First() - DateTime.Now).Value.ToString("hh\\:mm\\:ss");
-            else
+            try
+            {
+                if(AvailableTimesOfStation.First() <= DateTime.Now)
+                {
+                    AvailableTimesOfStation = await GetAvailableTimesOfStation(MyPivot.SelectedIndex == 0 ? Station.Directions.SM : Station.Directions.MS, SelectedStation.Id);
+                    UpdateInformation();
+                }
+                else
+                {
+                    var diff = AvailableTimesOfStation.First() - DateTime.Now;
+                    RemainingTimeTB.Text = diff.Value.ToString("hh\\:mm\\:ss");
+                }
+            }
+            catch
+            {
                 RemainingTimeTB.Text = "--:--:--";
+            }
+
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
@@ -79,7 +93,7 @@ namespace Metro_UWP
                 UpdateInformation();
                 MainPage.OnSearchBoxTextChanged += MainPage_OnSearchBoxTextChanged;
             }
-            catch (Exception )
+            catch (Exception)
             {
 
             }

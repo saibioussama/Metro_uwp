@@ -18,29 +18,40 @@
     
     
     
-    <Grid>
+    <Grid Margin="5"  
+          BorderBrush="#eee"
+          BorderThickness="1">
+       
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="5,5,5,0"
-                    Background="White"
+        <Grid Padding="10" 
+              BorderBrush="#eee"
+              Background="#7FF5F5F5"
+              BorderThickness="1,1,1,0">
+            <TextBlock FontWeight="Light" 
+                       FontSize="22">
+                Default station 
+            </TextBlock>
+        </Grid>
+        <StackPanel Grid.Row="1"
                     BorderBrush="#eee"
-                    BorderThickness="1">
+                    BorderThickness="1,0,1,1"
+                    Margin="0,0,0,5" 
+                    Background="White" >
             <TextBlock x:ConnectionId='5' FontWeight="Light"
                        FontSize="25"
                        Name="StationName"
                        Text=" - - - "
                        TextAlignment="Center"
-                       Padding="10"/> 
+                       Padding="10"/>
         </StackPanel>
-        
-        <Grid Margin="5" 
-              Background="White"
-              BorderBrush="#eee"
-              Grid.Row="1"
-              BorderThickness="1">
+
+        <Grid Background="White"
+              Grid.Row="2">
             <Pivot x:ConnectionId='2' Name="MyPivot"
                                                               >
             <PivotItem>
